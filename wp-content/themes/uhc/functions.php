@@ -59,8 +59,8 @@ add_action( 'wp_enqueue_scripts', 'inclusion_enqueue' );
 if( function_exists( 'acf_add_options_page' ) ){
 	acf_add_options_page(
 		[
-			'page_title' 	=> 'Options',
-			'menu_title'	=> 'Options',
+			'page_title' 	=> 'Theme options',
+			'menu_title'	=> 'Theme options',
 			'menu_slug' 	=> 'options',
 			'capability'	=> 'edit_posts',
 			'redirect'		=> false

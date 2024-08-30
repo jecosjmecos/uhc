@@ -21,7 +21,7 @@ const del			= require( 'del' )
 /**
  * ! IMPORTANT - Change value to your local domain name.
  */
-const baseDir = 'project.test/';
+const baseDir = 'uhc.loc/';
 
 // BrowserSync initialization.
 function browsersync(){

@@ -1,0 +1,19 @@
+.header{
+  font-weight: $fw-bold;
+
+  &_top{
+    background-color: $Primary-1;
+    color: $white;
+    padding: 11px;
+
+    .container{
+      display: flex;
+      justify-content: flex-end;
+      line-height: normal;
+    }
+  }
+  
+  &-lang{
+    text-transform: uppercase;
+  }
+}

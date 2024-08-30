@@ -52,4 +52,17 @@ $uri = get_template_directory_uri();
 
 	<div class="wrapper">
 		<header class="header">
+            <div class="header_top">
+                <div class="container">
+                    <div class="header-lang">
+                        Eng
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_bottom">
+                <div class="container">
+                    
+                </div>
+            </div>
 		</header>

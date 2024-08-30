@@ -267,7 +267,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 1rem; }
@@ -303,7 +303,6 @@ a {
   display: inline-block;
   text-decoration: underline;
   -webkit-transition: color ease-out 0.35s;
-  -o-transition: color ease-out 0.35s;
   transition: color ease-out 0.35s; }
   a:hover {
     text-decoration: none; }
@@ -327,10 +326,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: #000;
+  color: #26697D;
   background-color: #fff; }
 
 img {
@@ -367,9 +366,9 @@ img {
   @media (min-width: 992px) {
     .container {
       max-width: 960px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1300px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1280px; } }
 
 /*************************/
 /* Styles for WP content */
@@ -421,5 +420,21 @@ img.alignright,
 /*************************************/
 /* /End of the Styles for WP content */
 /*************************************/
+.header {
+  font-weight: 700; }
+  .header_top {
+    background-color: #26697D;
+    color: #fff;
+    padding: 11px; }
+    .header_top .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      line-height: normal; }
+  .header-lang {
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=main.min.css.map */

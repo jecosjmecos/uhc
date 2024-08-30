@@ -4,19 +4,19 @@ $grid-breakpoints: (
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1200px
+	xl: 1300px
 );
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
+	xl: 1280px
 );
 $grid-gutter-width: 40px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff			: 'Montserrat', sans-serif;
+$ff-title	: 'Montserrat', sans-serif;
 
 // Font sizes.
 $fs-xs	: 12px;
@@ -41,6 +41,7 @@ $lh-title	: 1.2;
 // Colors.
 $white	: #fff;
 $black	: #000;
+$Primary-1: #26697D;
 
 // Others.
 $transition		: 0.35s;
