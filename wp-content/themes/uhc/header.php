@@ -9,8 +9,8 @@
  * @subpackage UHC
  */
 
-// Theme URI for favicon and etc.
 $uri = get_template_directory_uri();
+$logo = get_field('logo', 'option');
 ?>
 
 <!doctype html>
@@ -62,7 +62,20 @@ $uri = get_template_directory_uri();
 
             <div class="header_bottom">
                 <div class="container">
-                    
+
+                    <?php
+                    if(!empty($logo)):
+                        echo '<div class="header-logo">' . wp_get_attachment_image($logo, 'logo') . '</div>';
+                    endif;
+
+                    wp_nav_menu( [
+                       'theme_location' => 'header_menu',
+                        'container' => 'nav',
+                        'container_class' => 'header-menu-wrapper',
+                        'menu_class' => 'header-menu',
+                        'menu_id' => 'headerMenu',
+                    ]);
+                    ?>
                 </div>
             </div>
 		</header>

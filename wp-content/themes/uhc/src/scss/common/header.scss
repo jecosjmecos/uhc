@@ -1,5 +1,10 @@
 .header{
   font-weight: $fw-bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 
   &_top{
     background-color: $Primary-1;
@@ -12,8 +17,120 @@
       line-height: normal;
     }
   }
+
+  &_bottom{
+    padding: 30px 0;
+    .container{
+      display: flex;
+      align-items: center;
+    }
+  }
   
   &-lang{
     text-transform: uppercase;
+  }
+
+  &-menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-weight: $fw-bold;
+    line-height: normal;
+    text-transform: uppercase;
+    gap: 20px 40px;
+
+    &-wrapper{
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    ul{
+      padding: 0;
+      margin: 0;
+    }
+
+    li{
+      list-style-type: none;
+      position: relative;
+
+      .sub-menu{
+        transition: opacity ease-out $transition, transform ease-out $transition;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        padding: 20px 20px 16px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $white;
+        border-radius: 0 8px 8px 8px;
+        min-width: calc(100% + 20px);
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transform: translateY(10px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      &.menu-item-has-children{
+        &>a{
+          padding-right: 20px;
+          &:before{
+            content: '';
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(calc(-50% - 4px));
+            right: 0;
+            background-image: url('../../src/image/select-arrow.svg');
+            transition: transform ease-out $transition;
+          }
+
+          &:is(:hover, :focus){
+            &:before{
+              transform: translateY(calc(-50% - 4px)) rotate(180deg);
+            }
+          }
+        }
+
+        &:hover{
+          &>.sub-menu{
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    
+    a{
+      text-decoration: none;
+      color: $Primary-1;
+      padding-bottom: 6px;
+      position: relative;
+
+      &:after{
+        content: '';
+        background-color: $Primary-1;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity ease-out $transition;
+      }
+
+      &:is(:hover, :focus){
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
   }
 }

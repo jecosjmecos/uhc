@@ -421,7 +421,12 @@ img.alignright,
 /* /End of the Styles for WP content */
 /*************************************/
 .header {
-  font-weight: 700; }
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; }
   .header_top {
     background-color: #26697D;
     color: #fff;
@@ -434,7 +439,120 @@ img.alignright,
           -ms-flex-pack: end;
               justify-content: flex-end;
       line-height: normal; }
+  .header_bottom {
+    padding: 30px 0; }
+    .header_bottom .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
   .header-lang {
     text-transform: uppercase; }
+  .header-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    gap: 20px 40px; }
+    .header-menu-wrapper {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+    .header-menu ul {
+      padding: 0;
+      margin: 0; }
+    .header-menu li {
+      list-style-type: none;
+      position: relative; }
+      .header-menu li .sub-menu {
+        -webkit-transition: opacity ease-out 0.35s, -webkit-transform ease-out 0.35s;
+        transition: opacity ease-out 0.35s, -webkit-transform ease-out 0.35s;
+        transition: opacity ease-out 0.35s, transform ease-out 0.35s;
+        transition: opacity ease-out 0.35s, transform ease-out 0.35s, -webkit-transform ease-out 0.35s;
+        -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        padding: 20px 20px 16px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border-radius: 0 8px 8px 8px;
+        min-width: calc(100% + 20px);
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 10px;
+        -webkit-transform: translateY(10px);
+            -ms-transform: translateY(10px);
+                transform: translateY(10px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none; }
+      .header-menu li.menu-item-has-children > a {
+        padding-right: 20px; }
+        .header-menu li.menu-item-has-children > a:before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(calc(-50% - 4px));
+              -ms-transform: translateY(calc(-50% - 4px));
+                  transform: translateY(calc(-50% - 4px));
+          right: 0;
+          background-image: url("../../src/image/select-arrow.svg");
+          -webkit-transition: -webkit-transform ease-out 0.35s;
+          transition: -webkit-transform ease-out 0.35s;
+          transition: transform ease-out 0.35s;
+          transition: transform ease-out 0.35s, -webkit-transform ease-out 0.35s; }
+        .header-menu li.menu-item-has-children > a:is(:hover, :focus):before {
+          -webkit-transform: translateY(calc(-50% - 4px)) rotate(180deg);
+              -ms-transform: translateY(calc(-50% - 4px)) rotate(180deg);
+                  transform: translateY(calc(-50% - 4px)) rotate(180deg); }
+      .header-menu li.menu-item-has-children:hover > .sub-menu {
+        pointer-events: auto;
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0); }
+    .header-menu a {
+      text-decoration: none;
+      color: #26697D;
+      padding-bottom: 6px;
+      position: relative; }
+      .header-menu a:after {
+        content: '';
+        background-color: #26697D;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: opacity ease-out 0.35s;
+        transition: opacity ease-out 0.35s; }
+      .header-menu a:is(:hover, :focus):after {
+        opacity: 1; }
 
 /*# sourceMappingURL=main.min.css.map */

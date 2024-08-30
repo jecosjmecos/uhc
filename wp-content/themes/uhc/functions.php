@@ -35,7 +35,7 @@ function init_theme(){
 	add_theme_support( 'post-thumbnails' );
 
 	// Custom image sizes.
-	// add_image_size( 'full-hd', 1920, 0, 1 );
+	 add_image_size( 'logo', 150);
 }
 
 /**
