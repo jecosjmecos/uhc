@@ -430,7 +430,7 @@ img.alignright,
   .header_top {
     background-color: #26697D;
     color: #fff;
-    padding: 11px; }
+    padding: 5px; }
     .header_top .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -450,6 +450,28 @@ img.alignright,
               align-items: center; }
   .header-lang {
     text-transform: uppercase; }
+    .header-lang .wpml-ls-legacy-list-horizontal {
+      padding: 0; }
+      .header-lang .wpml-ls-legacy-list-horizontal .wpml-ls-current-language {
+        display: none; }
+      .header-lang .wpml-ls-legacy-list-horizontal a {
+        padding: 6px 0;
+        color: #fff;
+        position: relative; }
+        .header-lang .wpml-ls-legacy-list-horizontal a:after {
+          content: '';
+          background-color: #fff;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          opacity: 0;
+          -webkit-transition: opacity ease-out 0.35s;
+          transition: opacity ease-out 0.35s; }
+        .header-lang .wpml-ls-legacy-list-horizontal a:is(:hover, :focus):after {
+          opacity: 1; }
   .header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
