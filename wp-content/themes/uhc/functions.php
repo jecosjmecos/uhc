@@ -40,6 +40,7 @@ function init_theme(){
 	 add_image_size( 'banner-slider', 1240, 440, 1);
 	 add_image_size( 'info-section', 350, 350, 1);
 	 add_image_size( 'image-450-350', 450, 350, 1);
+	 add_image_size( 'image-300-360', 300, 360, 1);
 }
 
 /**
