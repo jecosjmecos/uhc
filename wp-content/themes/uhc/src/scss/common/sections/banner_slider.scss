@@ -20,26 +20,7 @@
     }
 
     &-pagination{
-      display: flex;
-      justify-content: center;
-      align-items: center;
       bottom: 28px;
-
-      &-bullet{
-        --swiper-pagination-bullet-horizontal-gap: 5px;
-
-        transition: transform ease-out $transition, background-color ease-out $transition;
-        height: 16px;
-        width: 16px;
-        background-color: $gray-2;
-        opacity: 1;
-
-        &-active{
-          height: 24px;
-          width: 24px;
-          background-color: $white;
-        }
-      }
     }
   }
 }
