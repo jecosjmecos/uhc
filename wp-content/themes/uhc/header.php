@@ -11,6 +11,7 @@
 
 $uri = get_template_directory_uri();
 $logo = get_field('logo', 'option');
+if(!empty($logo)) $logo = wp_get_original_image_path($logo);
 ?>
 
 <!doctype html>
@@ -66,10 +67,10 @@ $logo = get_field('logo', 'option');
             <div class="container">
 
                 <?php
-                if (!empty($logo)):
+                if (file_exists($logo)):
                     $logo_link_arg = [
-                        'title' => wp_get_attachment_image($logo, 'logo'),
-                        'href' => get_home_url(),
+                        'title' => file_get_contents($logo),
+                        'url' => get_home_url(),
                     ];
                     echo get_theme_link($logo_link_arg, 'header-logo');
                 endif;

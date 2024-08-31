@@ -36,6 +36,7 @@ function init_theme(){
 
 	// Custom image sizes.
 	 add_image_size( 'logo', 150);
+	 add_image_size( 'logo-footer', 240);
 }
 
 /**

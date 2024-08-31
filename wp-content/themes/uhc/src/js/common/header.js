@@ -1,14 +1,15 @@
-( function( $ ){
-    'use strict';
+document.addEventListener('DOMContentLoaded', function(){
+	setBodyPaddingByHeader();
 
-	/**
-	 * When Document is ready.
-	 * Please place only functions calls here.
-	 */
-	$( function(){
-	} );
+	window.addEventListener('resize', setBodyPaddingByHeader);
+});
 
-	/**
-	 * Please place all functions declarations below (or in other files).
-	 */
-} )( jQuery );
+function setBodyPaddingByHeader(){
+	const header = document.querySelector('.header');
+
+	if(!header) return false;
+
+	let headerHeight = header.offsetHeight;
+
+	document.querySelector('body').style.paddingTop = headerHeight + 'px';
+}
