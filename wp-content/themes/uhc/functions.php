@@ -38,6 +38,7 @@ function init_theme(){
 	 add_image_size( 'logo', 150);
 	 add_image_size( 'logo-footer', 240);
 	 add_image_size( 'banner-slider', 1240, 440, 1);
+	 add_image_size( 'info-section', 350, 350, 1);
 }
 
 /**
