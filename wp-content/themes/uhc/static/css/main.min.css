@@ -399,6 +399,13 @@ h6, .h6 {
   line-height: 1.2;
   margin: 0 0 1rem;
   text-transform: uppercase; }
+  h1.title_alt-color, .h1.title_alt-color,
+  h2.title_alt-color, .h2.title_alt-color,
+  h3.title_alt-color, .h3.title_alt-color,
+  h4.title_alt-color, .h4.title_alt-color,
+  h5.title_alt-color, .h5.title_alt-color,
+  h6.title_alt-color, .h6.title_alt-color {
+    color: #CBF9CC; }
 
 h1, .h1 {
   font-size: 60px; }
@@ -549,6 +556,13 @@ img.alignright,
 section {
   padding: 60px 0; }
 
+.swiper-button-prev, .swiper-button-next {
+  z-index: 9;
+  height: 42px;
+  width: 42px; }
+  .swiper-button-prev:after, .swiper-button-next:after {
+    display: none; }
+
 .swiper-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,6 +589,13 @@ section {
       background-color: #fff; }
   .swiper-pagination_alt .swiper-pagination-bullet-active {
     background-color: #26697D; }
+
+.colored-wrapper {
+  background-color: #26697D;
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  color: #fff; }
 
 .header {
   font-weight: 700;
@@ -1039,5 +1060,50 @@ section {
     bottom: 0;
     left: 0;
     right: 0; }
+
+.cards-slider {
+  padding: 0 60px;
+  position: relative; }
+  .cards-slider-section {
+    text-align: center; }
+    .cards-slider-section h2 {
+      margin-bottom: 36px; }
+    .cards-slider-section-text {
+      margin-bottom: 36px; }
+  .cards-slider .swiper-wrapper {
+    margin: 0 auto; }
+  .cards-slider .swiper-slide__inner {
+    position: relative;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden; }
+    .cards-slider .swiper-slide__inner div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 24px;
+      background-color: #fff;
+      color: #26697D;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-transition: opacity ease-out 0.35s;
+      transition: opacity ease-out 0.35s; }
+      .cards-slider .swiper-slide__inner div:nth-child(1) {
+        z-index: 1;
+        font-size: 20px;
+        font-weight: 700; }
+    .cards-slider .swiper-slide__inner:is(:hover, :focus) div:nth-child(1) {
+      opacity: 0; }
 
 /*# sourceMappingURL=main.min.css.map */

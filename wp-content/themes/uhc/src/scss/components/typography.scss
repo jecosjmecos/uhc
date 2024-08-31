@@ -9,6 +9,10 @@ h6, .h6 {
 	line-height: $lh-title;
 	margin: 0 0 1rem;
 	text-transform: uppercase;
+
+	&.title_alt-color{
+		color: $primary-2;
+	}
 }
 
 h1, .h1 {

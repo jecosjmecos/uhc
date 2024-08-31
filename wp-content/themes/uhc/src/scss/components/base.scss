@@ -112,6 +112,19 @@ section{
 }
 
 .swiper{
+	&-button{
+		&-prev,
+		&-next{
+			z-index: 9;
+			height: 42px;
+			width: 42px;
+
+			&:after{
+				display: none;
+			}
+		}
+	}
+
 	&-pagination{
 		display: flex;
 		justify-content: center;
@@ -139,4 +152,12 @@ section{
 			}
 		}
 	}
+}
+
+.colored-wrapper{
+	background-color: $primary-color;
+	border-radius: 50px;
+	margin: 0 auto;
+	padding: 60px 40px;
+	color: $white;
 }
