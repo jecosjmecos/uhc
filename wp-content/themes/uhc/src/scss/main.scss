@@ -3,6 +3,7 @@
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
 @import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/swiper/swiper-bundle.css';
 
 // Theme components.
 @import 'components/vars';
@@ -14,6 +15,7 @@
 // Theme common styles.
 @import 'common/header';
 @import 'common/footer';
+@import 'common/banner_slider';
 
 // Other styles. Please headline each group of your custom styles, for example:
 // ACF Flexible content styles.
