@@ -1,0 +1,75 @@
+.faq{
+  &-item{
+    border-bottom: 1px solid $primary-color;
+    transition: border-color ease-out $transition;
+
+    &:is(:hover, :focus){
+      border-color: $gray-2;
+    }
+
+    &__head{
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 36px;
+      font-weight: $fw-bold;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      padding: 32px 0;
+      transition: color ease-out $transition;
+
+      svg{
+        path{
+          transition: fill ease-out $transition;
+        }
+      }
+
+      &:is(:hover, :focus){
+        color: $gray-2;
+
+        svg{
+          path{
+            fill: $gray-2;
+          }
+        }
+      }
+    }
+
+    &__body{
+      overflow: hidden;
+      transition: max-height ease-in-out $transition;
+      max-height: 0;
+      
+      &-inner{
+        padding-bottom: 32px;
+        
+        a{
+          color: $primary-color;
+          text-decoration: underline;
+          
+          &:is(:hover, :focus){
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    
+    &.active{
+      border-color: $gray-2;
+
+      .faq-item__head{
+        span{
+          &:nth-child(2){
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .faq-item__body{
+        max-height: 5000px;
+      }
+    }
+  }
+}
