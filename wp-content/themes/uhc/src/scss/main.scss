@@ -12,6 +12,7 @@
 
 // Theme base styles.
 @import 'components/base';
+@import 'components/button';
 
 // Theme common styles.
 @import 'common/header';
@@ -21,6 +22,7 @@
 @import 'common/sections/image_and_content_slider';
 @import 'common/sections/cards_slider';
 @import 'common/sections/team';
+
 
 // Other styles. Please headline each group of your custom styles, for example:
 // ACF Flexible content styles.

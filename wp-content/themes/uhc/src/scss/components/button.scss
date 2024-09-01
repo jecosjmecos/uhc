@@ -1,0 +1,30 @@
+.btn,
+.button{
+  border-radius: 50px;
+  background-color: $primary-color;
+  color: $white;
+  font-size: $fs-xl;
+  font-weight: $fw-bold;
+  text-decoration: none;
+  padding: 10px 24px;
+  min-height: 56px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+
+  span{
+    transition: margin-left ease-out $transition;
+  }
+
+  &:is(:hover, :focus){
+    color: $white;
+
+    span{
+      &:nth-child(2){
+        margin-left: 10px;
+      }
+    }
+  }
+}

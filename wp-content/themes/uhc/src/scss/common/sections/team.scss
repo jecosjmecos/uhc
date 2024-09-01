@@ -74,4 +74,10 @@
       font-weight: $fw-bold;
     }
   }
+
+  &-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
 }

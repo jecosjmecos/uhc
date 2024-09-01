@@ -435,8 +435,8 @@ h6, .h6 {
 a {
   display: inline-block;
   text-decoration: underline;
-  -webkit-transition: color ease-out 0.35s;
-  transition: color ease-out 0.35s; }
+  -webkit-transition: color ease-out 0.3s;
+  transition: color ease-out 0.3s; }
   a:hover {
     text-decoration: none; }
 
@@ -575,10 +575,10 @@ section {
           align-items: center; }
   .swiper-pagination-bullet {
     --swiper-pagination-bullet-horizontal-gap: 5px;
-    -webkit-transition: background-color ease-out 0.35s, -webkit-transform ease-out 0.35s;
-    transition: background-color ease-out 0.35s, -webkit-transform ease-out 0.35s;
-    transition: transform ease-out 0.35s, background-color ease-out 0.35s;
-    transition: transform ease-out 0.35s, background-color ease-out 0.35s, -webkit-transform ease-out 0.35s;
+    -webkit-transition: background-color ease-out 0.3s, -webkit-transform ease-out 0.3s;
+    transition: background-color ease-out 0.3s, -webkit-transform ease-out 0.3s;
+    transition: transform ease-out 0.3s, background-color ease-out 0.3s;
+    transition: transform ease-out 0.3s, background-color ease-out 0.3s, -webkit-transform ease-out 0.3s;
     height: 16px;
     width: 16px;
     background-color: #868686;
@@ -596,6 +596,38 @@ section {
   margin: 0 auto;
   padding: 60px 40px;
   color: #fff; }
+
+.btn,
+.button {
+  border-radius: 50px;
+  background-color: #26697D;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 24px;
+  min-height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%; }
+  .btn span,
+  .button span {
+    -webkit-transition: margin-left ease-out 0.3s;
+    transition: margin-left ease-out 0.3s; }
+  .btn:is(:hover, :focus),
+  .button:is(:hover, :focus) {
+    color: #fff; }
+    .btn:is(:hover, :focus) span:nth-child(2),
+    .button:is(:hover, :focus) span:nth-child(2) {
+      margin-left: 10px; }
 
 .header {
   font-weight: 700;
@@ -646,8 +678,8 @@ section {
           left: 0;
           right: 0;
           opacity: 0;
-          -webkit-transition: opacity ease-out 0.35s;
-          transition: opacity ease-out 0.35s; }
+          -webkit-transition: opacity ease-out 0.3s;
+          transition: opacity ease-out 0.3s; }
         .header-lang .wpml-ls-legacy-list-horizontal a:is(:hover, :focus):after {
           opacity: 1; }
   .header-menu {
@@ -677,10 +709,10 @@ section {
       list-style-type: none;
       position: relative; }
       .header-menu li .sub-menu {
-        -webkit-transition: opacity ease-out 0.35s, -webkit-transform ease-out 0.35s;
-        transition: opacity ease-out 0.35s, -webkit-transform ease-out 0.35s;
-        transition: opacity ease-out 0.35s, transform ease-out 0.35s;
-        transition: opacity ease-out 0.35s, transform ease-out 0.35s, -webkit-transform ease-out 0.35s;
+        -webkit-transition: opacity ease-out 0.3s, -webkit-transform ease-out 0.3s;
+        transition: opacity ease-out 0.3s, -webkit-transform ease-out 0.3s;
+        transition: opacity ease-out 0.3s, transform ease-out 0.3s;
+        transition: opacity ease-out 0.3s, transform ease-out 0.3s, -webkit-transform ease-out 0.3s;
         -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
                 box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
         padding: 20px 20px 16px;
@@ -720,10 +752,10 @@ section {
                   transform: translateY(calc(-50% - 4px));
           right: 0;
           background-image: url("../../src/images/select-arrow.svg");
-          -webkit-transition: -webkit-transform ease-out 0.35s;
-          transition: -webkit-transform ease-out 0.35s;
-          transition: transform ease-out 0.35s;
-          transition: transform ease-out 0.35s, -webkit-transform ease-out 0.35s; }
+          -webkit-transition: -webkit-transform ease-out 0.3s;
+          transition: -webkit-transform ease-out 0.3s;
+          transition: transform ease-out 0.3s;
+          transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s; }
         .header-menu li.menu-item-has-children > a:is(:hover, :focus):before {
           -webkit-transform: translateY(calc(-50% - 4px)) rotate(180deg);
               -ms-transform: translateY(calc(-50% - 4px)) rotate(180deg);
@@ -750,8 +782,8 @@ section {
         left: 0;
         right: 0;
         opacity: 0;
-        -webkit-transition: opacity ease-out 0.35s;
-        transition: opacity ease-out 0.35s; }
+        -webkit-transition: opacity ease-out 0.3s;
+        transition: opacity ease-out 0.3s; }
       .header-menu a:is(:hover, :focus):after {
         opacity: 1; }
 
@@ -834,10 +866,10 @@ section {
             -ms-flex-align: center;
                 align-items: center;
         border-radius: 50px;
-        -webkit-transition: -webkit-transform ease-out 0.35s;
-        transition: -webkit-transform ease-out 0.35s;
-        transition: transform ease-out 0.35s;
-        transition: transform ease-out 0.35s, -webkit-transform ease-out 0.35s; }
+        -webkit-transition: -webkit-transform ease-out 0.3s;
+        transition: -webkit-transform ease-out 0.3s;
+        transition: transform ease-out 0.3s;
+        transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s; }
         .footer-social li a img {
           max-width: 20px;
           max-height: 20px; }
@@ -874,8 +906,8 @@ section {
           right: 0;
           position: absolute;
           opacity: 0;
-          -webkit-transition: opacity ease-out 0.35s;
-          transition: opacity ease-out 0.35s; }
+          -webkit-transition: opacity ease-out 0.3s;
+          transition: opacity ease-out 0.3s; }
         .footer-menu li a:is(:hover, :focus):after {
           opacity: 1; }
   .footer-subscribe {
@@ -907,10 +939,10 @@ section {
       min-height: 46px;
       border-radius: 50px; }
       .footer-subscribe__link a span:nth-child(2) {
-        -webkit-transition: -webkit-transform ease-out 0.35s;
-        transition: -webkit-transform ease-out 0.35s;
-        transition: transform ease-out 0.35s;
-        transition: transform ease-out 0.35s, -webkit-transform ease-out 0.35s; }
+        -webkit-transition: -webkit-transform ease-out 0.3s;
+        transition: -webkit-transform ease-out 0.3s;
+        transition: transform ease-out 0.3s;
+        transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s; }
       .footer-subscribe__link a:is(:hover, :focus) span:nth-child(2) {
         -webkit-transform: translateX(-10px);
             -ms-transform: translateX(-10px);
@@ -1097,8 +1129,8 @@ section {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      -webkit-transition: opacity ease-out 0.35s;
-      transition: opacity ease-out 0.35s; }
+      -webkit-transition: opacity ease-out 0.3s;
+      transition: opacity ease-out 0.3s; }
       .cards-slider .swiper-slide__inner div:nth-child(1) {
         z-index: 1;
         font-size: 20px;
@@ -1165,15 +1197,15 @@ section {
             justify-content: space-between;
     font-size: 14px;
     opacity: 0;
-    -webkit-transition: opacity ease-out 0.35s;
-    transition: opacity ease-out 0.35s; }
+    -webkit-transition: opacity ease-out 0.3s;
+    transition: opacity ease-out 0.3s; }
     .team-item__content div:nth-child(2) {
       padding-top: 30px; }
       .team-item__content div:nth-child(2) a {
-        -webkit-transition: -webkit-transform ease-out 0.35s;
-        transition: -webkit-transform ease-out 0.35s;
-        transition: transform ease-out 0.35s;
-        transition: transform ease-out 0.35s, -webkit-transform ease-out 0.35s; }
+        -webkit-transition: -webkit-transform ease-out 0.3s;
+        transition: -webkit-transform ease-out 0.3s;
+        transition: transform ease-out 0.3s;
+        transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s; }
         .team-item__content div:nth-child(2) a:is(:hover, :active) {
           -webkit-transform: scale(1.1);
               -ms-transform: scale(1.1);
@@ -1181,5 +1213,14 @@ section {
   .team-item__name {
     font-size: 20px;
     font-weight: 700; }
+
+.team-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 60px; }
 
 /*# sourceMappingURL=main.min.css.map */
