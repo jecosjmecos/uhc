@@ -555,6 +555,8 @@ img.alignright,
 /*************************************/
 section {
   padding: 60px 0; }
+  section:last-of-type {
+    padding-bottom: 120px; }
 
 .swiper-button-prev, .swiper-button-next {
   z-index: 9;
@@ -596,6 +598,9 @@ section {
   margin: 0 auto;
   padding: 60px 40px;
   color: #fff; }
+
+.mgt-100 {
+  margin-top: 100px; }
 
 .btn,
 .button {
@@ -1340,5 +1345,50 @@ section {
           justify-content: center; }
   .logos-ticker__item img {
     max-width: none; }
+
+.text-editor-section img {
+  max-width: 100%;
+  height: auto; }
+
+.text-editor-section .aligncenter,
+.text-editor-section .img-align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.text-editor-section .alignleft,
+.text-editor-section .img-align-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+.text-editor-section .alignright,
+.text-editor-section .img-align-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px; }
+
+.text-editor-section .alignwide {
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.text-editor-section .alignfull {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%); }
+
+.text-editor-section .wp-caption img {
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: #f9f9f9; }
+
+.text-editor-section .wp-caption-text,
+.text-editor-section .figcaption {
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 5px;
+  color: #666; }
 
 /*# sourceMappingURL=main.min.css.map */
