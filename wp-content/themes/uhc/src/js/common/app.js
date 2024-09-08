@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
 	faq();
+	quotesSliderSection();
 });
 
 function faq(){
@@ -21,5 +22,26 @@ function faq(){
 				faqItem.classList.add('active');
 			}
 		})
+	});
+}
+
+function quotesSliderSection(){
+	const buttons = document.querySelectorAll('.quotes-button');
+
+	if(!buttons.length) return false;
+
+	buttons.forEach(button => {
+		button.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			let section = button.closest('.quotes-slider-section'),
+				bottomPosition = section.offsetTop + section.offsetHeight;
+
+
+			window.scrollTo({
+				top: bottomPosition,
+				behavior: 'smooth'
+			});
+		});
 	});
 }

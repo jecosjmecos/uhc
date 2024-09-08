@@ -10,6 +10,7 @@ class SiteSliders{
         this.initImageContentSlider();
         this.initCardsSlider();
         this.initLogosTickerSlider();
+        this.initQuotesSlider();
     }
 
     initSwiperArrows(){
@@ -67,6 +68,23 @@ class SiteSliders{
                 nextEl: ".cards-slider .swiper-button-next",
                 prevEl: ".cards-slider .swiper-button-prev",
             },
+            breakpoints: {
+                320: {
+
+                },
+                578: {
+
+                },
+                768: {
+
+                },
+                992: {
+                    spaceBetween: 32,
+                },
+                1300: {
+                    spaceBetween: 64,
+                },
+            },
         });
     }
 
@@ -103,6 +121,20 @@ class SiteSliders{
             });
         });
 
+    }
+
+    initQuotesSlider(){
+        const quotesSlider = new Swiper('.quotes-slider', {
+            loop: true,
+            speed: 800,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // autoplay: {
+            //     delay: 5000,
+            // },
+        });
     }
 }
 

@@ -73,10 +73,19 @@
     text-transform: uppercase;
     gap: 20px 40px;
 
+    @include media-breakpoint-down(lg){
+      gap: 20px;
+      font-size: 14px;
+    }
+
     &-wrapper{
       flex: 1 1 auto;
       display: flex;
       justify-content: flex-end;
+
+      @include media-breakpoint-down(md){
+        display: none;
+      }
     }
 
     ul{

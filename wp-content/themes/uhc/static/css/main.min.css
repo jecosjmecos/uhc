@@ -408,10 +408,8 @@ h6, .h6 {
     color: #CBF9CC; }
 
 h1, .h1 {
-  font-size: 60px; }
-  @media (min-width: 576px) {
-    h1, .h1 {
-      font-size: 32px; } }
+  font-size: 60px;
+  margin-bottom: 24px; }
 
 h2, .h2 {
   font-size: 36px;
@@ -697,6 +695,10 @@ section {
     line-height: normal;
     text-transform: uppercase;
     gap: 20px 40px; }
+    @media (max-width: 1299.98px) {
+      .header-menu {
+        gap: 20px;
+        font-size: 14px; } }
     .header-menu-wrapper {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 auto;
@@ -707,6 +709,9 @@ section {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
+      @media (max-width: 991.98px) {
+        .header-menu-wrapper {
+          display: none; } }
     .header-menu ul {
       padding: 0;
       margin: 0; }
@@ -1115,6 +1120,9 @@ section {
     background-color: #fff;
     border-radius: 50px;
     overflow: hidden; }
+    @media (max-width: 1299.98px) {
+      .cards-slider .swiper-slide__inner {
+        min-height: 250px; } }
     .cards-slider .swiper-slide__inner div {
       position: absolute;
       top: 0;
@@ -1390,5 +1398,103 @@ section {
   text-align: center;
   margin-top: 5px;
   color: #666; }
+
+.quotes-slider-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px 80px; }
+
+.quotes-slider-section .quotes-slider-content {
+  max-width: calc(100% - 358px - 80px); }
+
+.quotes-slider-section .quotes-slider-image {
+  min-width: 358px;
+  max-width: 358px; }
+  .quotes-slider-section .quotes-slider-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    -o-object-fit: contain;
+       object-fit: contain; }
+
+.quotes-slider-section .quotes-slider .swiper-pagination {
+  position: static;
+  margin-bottom: 24px; }
+
+.quotes-slider-section .quotes-slider-item__inner {
+  min-height: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.quotes-slider-section .quotes-slider-item__quote {
+  padding: 50px 0;
+  font-size: 20px;
+  position: relative;
+  width: calc(100% - 5px); }
+  .quotes-slider-section .quotes-slider-item__quote:before, .quotes-slider-section .quotes-slider-item__quote:after {
+    content: '';
+    width: 30px;
+    height: 40px;
+    background-image: url("../../src/images/quote.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    background-size: contain; }
+  .quotes-slider-section .quotes-slider-item__quote:before {
+    top: 0;
+    left: 0; }
+  .quotes-slider-section .quotes-slider-item__quote:after {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.quotes-slider-section .quotes-slider-item__author {
+  font-weight: 700;
+  font-size: 16px; }
+
+.quotes-slider-section .quotes-button a {
+  border-radius: 20px;
+  border: 1px solid #26697D;
+  padding: 5px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #26697D;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  min-height: 30px;
+  -webkit-transition: color ease-out 0.3s, background-color ease-out 0.3s;
+  transition: color ease-out 0.3s, background-color ease-out 0.3s; }
+  .quotes-slider-section .quotes-button a svg path {
+    -webkit-transition: fill ease-out 0.3s;
+    transition: fill ease-out 0.3s; }
+  .quotes-slider-section .quotes-button a:is(:hover, :focus) {
+    color: #fff;
+    background-color: #26697D; }
+    .quotes-slider-section .quotes-button a:is(:hover, :focus) svg path {
+      fill: #fff; }
 
 /*# sourceMappingURL=main.min.css.map */

@@ -764,6 +764,184 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_66dda58437473": {
+                    "key": "layout_66dda58437473",
+                    "name": "quotes_slider",
+                    "label": "Quotes slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66dda59d37475",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_66dde36b23c18",
+                            "label": "Title type",
+                            "name": "title_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "choices": {
+                                "h2": "h2",
+                                "h1": "h1"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_66dda5b837476",
+                            "label": "Slider",
+                            "name": "slider",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Додати рядок",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66dda5c937477",
+                                    "label": "Quote",
+                                    "name": "quote",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 2,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_66dda5b837476"
+                                },
+                                {
+                                    "key": "field_66dda5d837478",
+                                    "label": "Author",
+                                    "name": "author",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 2,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_66dda5b837476"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_66dde45082603",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_66dda5eb37479",
+                            "label": "Button text",
+                            "name": "button_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "When you click on the button, the page will scroll to the next section",
+                            "required": false,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -790,5 +968,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1725791468
+    "modified": 1725817957
 }
