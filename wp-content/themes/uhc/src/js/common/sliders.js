@@ -9,6 +9,7 @@ class SiteSliders{
         this.initBannerSlider();
         this.initImageContentSlider();
         this.initCardsSlider();
+        this.initLogosTickerSlider();
     }
 
     initSwiperArrows(){
@@ -67,6 +68,41 @@ class SiteSliders{
                 prevEl: ".cards-slider .swiper-button-prev",
             },
         });
+    }
+
+    initLogosTickerSlider(){
+        const tickers = document.querySelectorAll('.logos-ticker');
+        tickers.forEach((container, index) => {
+            container.swiper = new Swiper(container, {
+                slidesPerView: 6,
+                spaceBetween: 80,
+                loop: true,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                speed: 3000,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                    },
+                    578: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    },
+                    1200: {
+                        slidesPerView: 6,
+                    },
+                },
+            });
+        });
+
     }
 }
 

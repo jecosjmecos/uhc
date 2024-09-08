@@ -1,0 +1,58 @@
+.logos-ticker{
+  &-section{
+    h2{
+      text-align: center;
+      margin-bottom: 64px;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    img,
+    svg{
+      max-width: 100%;
+    }
+  }
+
+  .swiper-container{
+    &_static{
+
+      .swiper-wrapper{
+        display: flex;
+        gap: 40px;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    text-align: center;
+  }
+
+  &__block{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__item{
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      max-width: none;
+    }
+  }
+}
