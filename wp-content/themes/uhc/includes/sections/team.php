@@ -13,31 +13,32 @@ if (empty($title) && empty($team) && empty($button)) return;
         <?php if (!empty($team)): ?>
             <div class="team-wrapper">
 
-                <?php foreach ($team as $item): ?>
+                <?php foreach ($team as $item):
+                    $item_id = $item->ID;
+                    $facebook = get_field('facebook', $item_id);
+                    $thumbnail = get_the_post_thumbnail($item_id, 'image-300-360');
+                    ?>
                     <div class="team-item">
                         <div class="team-item__photo">
-                            <?php
-                            if (!empty($item['photo'])) {
-                                echo wp_get_attachment_image($item['photo'], 'image-300-360');
-                            } ?>
+                            <?php if (!empty($thumbnail)) echo $thumbnail; ?>
 
-                            <?php if (!empty($item['description']) || !empty($item['facebook'])): ?>
+                            <?php if (!empty($item->post_content) || !empty($facebook)): ?>
                                 <div class="team-item__content">
-                                    <?php if(!empty($item['description'])) echo '<div>' . $item['description'] . '</div>'; ?>
+                                    <?php if(!empty($item->post_content)) echo '<div>' . $item->post_content . '</div>'; ?>
 
                                     <?php
-                                    if(!empty($item['facebook'])){
+                                    if(!empty($facebook)){
 
                                         $icon_src = get_template_directory() . '/src/images/white-facebook.svg';
-                                        if(file_exists($icon_src)) $item['facebook']['title'] = file_get_contents($icon_src);
+                                        if(file_exists($icon_src)) $facebook['title'] = file_get_contents($icon_src);
 
-                                        echo '<div>' . get_theme_link($item['facebook']) . '</div>';
+                                        echo '<div>' . get_theme_link($facebook) . '</div>';
                                     }  ?>
                                 </div>
                             <?php endif; ?>
                         </div>
 
-                        <?php if (!empty($item['name'])) echo '<div class="team-item__name">' . $item['name'] . '</div>' ?>
+                        <?php if (!empty($item->post_title)) echo '<div class="team-item__name">' . $item->post_title . '</div>' ?>
                     </div>
                 <?php endforeach; ?>
 
