@@ -42,6 +42,7 @@ function init_theme(){
 	 add_image_size( 'image-450-350', 450, 350, 1);
 	 add_image_size( 'image-300-360', 300, 360, 1);
 	 add_image_size( 'image-358-471', 358, 471, 1);
+	 add_image_size( 'image-400-400', 400, 400, 1);
 }
 
 /**
@@ -72,5 +73,25 @@ if( function_exists( 'acf_add_options_page' ) ){
 			'redirect'		=> false
 		]
 	);
+}
+
+function get_post_back_link($post_id)
+{
+    $link = get_post_type_archive_link('post');
+    $icon = get_template_directory() . '/src/images/arrow.svg';
+    $icon = file_exists($icon) ? '<span>' . file_get_contents($icon) . '</span>' : '';
+
+    $categories = wp_get_post_categories($post_id);
+
+    foreach ($categories as $cat_id) {
+        $category = get_category($cat_id);
+
+        if($category->slug == 'bez-kategoriyi') continue;
+        if($category->category_parent !== 0) continue;
+
+        $link = get_category_link($category->term_id);
+    }
+
+    echo '<a href="' . $link . '">' . $icon . __('Back', 'uhc') . '</a>';
 }
 

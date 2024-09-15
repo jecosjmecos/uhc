@@ -25,7 +25,7 @@ $bg_img_404	= get_field( 'background_image_404', 'option' )
 					if( $title_404 ){
 						?>
 						<h1 class="hero-title">
-							<?php printf( esc_html__( '%s', 'theme_name' ), $title_404 ) ?>
+							<?php printf( esc_html__( '%s', 'uhc' ), $title_404 ) ?>
 						</h1>
 						<?php
 					}
