@@ -14,11 +14,23 @@
       font-weight: $fw-bold;
       text-transform: uppercase;
       display: flex;
-      justify-content: space-between;
       gap: 20px;
       align-items: center;
       padding: 32px 0;
       transition: color ease-out $transition;
+
+      span{
+        &.number{
+          min-width: 295px;
+
+          @media (max-width: 1400px) {
+            min-width: 100px;
+          }
+        }
+        &.arrow{
+          margin-left: auto;
+        }
+      }
 
       svg{
         path{
@@ -44,6 +56,15 @@
       
       &-inner{
         padding-bottom: 32px;
+
+        &_short{
+          max-width: 925px;
+          margin-left: auto;
+
+          .team-wrapper{
+            gap: 55px;
+          }
+        }
         
         a{
           color: $primary-color;
@@ -54,6 +75,31 @@
           }
         }
       }
+
+      .team-item__name{
+        font-size: 16px;
+        padding-top: 8px;
+      }
+    }
+
+    .two-columns{
+      display: flex;
+      gap: 30px 144px;
+      font-size: 16px;
+      text-align: justify;
+
+      @media (max-width: 1199.98px) {
+        gap: 30px 60px;
+      }
+
+      div{
+        width: 100%;
+        max-width: calc(100% - 72px);
+
+        @media (max-width: 1199.98px) {
+          max-width: calc(100% - 30px);
+        }
+      }
     }
     
     &.active{
@@ -61,7 +107,7 @@
 
       .faq-item__head{
         span{
-          &:nth-child(2){
+          &.arrow{
             transform: rotate(180deg);
           }
         }
@@ -71,5 +117,12 @@
         max-height: 5000px;
       }
     }
+  }
+}
+
+.page-id-190,
+.page-id-282{
+  .faq-v2{
+    padding-top: 0;
   }
 }

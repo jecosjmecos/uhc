@@ -2,7 +2,7 @@
 $text = get_sub_field('text');
 $faq = get_sub_field('faq');
 $faq_icon = get_template_directory() . '/src/images/faq-arrow.svg';
-if(file_exists($faq_icon)) $faq_icon = '<span>' . file_get_contents($faq_icon) . '</span>';
+$faq_icon = file_exists($faq_icon) ? '<span>' . file_get_contents($faq_icon) . '</span>' : '';
 
 if (empty($text) && empty($faq)) return;
 ?>
