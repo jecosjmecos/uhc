@@ -39,6 +39,7 @@ function init_theme(){
 	 add_image_size( 'logo-footer', 240);
 	 add_image_size( 'banner-slider', 1240, 440, 1);
 	 add_image_size( 'info-section', 350, 350, 1);
+	 add_image_size( 'image-240-240', 240, 240, 1);
 	 add_image_size( 'image-450-350', 450, 350, 1);
 	 add_image_size( 'image-300-360', 300, 360, 1);
 	 add_image_size( 'image-358-471', 358, 471, 1);
@@ -94,4 +95,21 @@ function get_post_back_link($post_id)
 
     echo '<a href="' . $link . '">' . $icon . __('Back', 'uhc') . '</a>';
 }
+
+function remove_archive_title_prefix($title) {
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    } elseif (is_tag()) {
+        $title = single_tag_title('', false);
+    } elseif (is_author()) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif (is_tax()) { //for custom post types
+        $title = sprintf(__('%1$s'), single_term_title('', false));
+    } elseif (is_post_type_archive()) {
+        $title = post_type_archive_title('', false);
+    }
+    return $title;
+}
+
+add_filter('get_the_archive_title', 'remove_archive_title_prefix');
 

@@ -1346,6 +1346,8 @@ img {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto; }
+  .container_short {
+    max-width: 1070px; }
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
@@ -2457,8 +2459,8 @@ section {
          object-position: center;
       width: 100%;
       height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
+      -o-object-fit: contain;
+         object-fit: contain; }
     .single-post-head__thumbnail_empty img,
     .single-post-head__thumbnail_empty svg {
       width: auto;
@@ -2471,5 +2473,151 @@ section {
   font-size: 20px; }
   .single-post-body__inner {
     padding-top: 123px; }
+
+.archive-wrapper {
+  padding: 30px 0 170px; }
+
+.archive-head {
+  margin-bottom: 60px;
+  text-align: center; }
+  .archive-head h1 {
+    margin-bottom: 40px; }
+  .archive-head__descr {
+    margin: 0 auto 40px;
+    font-weight: 700;
+    max-width: 1065px; }
+
+.archive-body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 100px 30px; }
+
+.archive-body .post-preview {
+  width: 100%;
+  max-width: calc(25% - 22.5px); }
+
+.post-preview {
+  border-radius: 50px;
+  background: #F4F4F4;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px; }
+  .post-preview__thumbnail {
+    background-color: #26697D;
+    border-radius: 50px;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .post-preview__thumbnail span {
+      -webkit-transition: -webkit-transform ease-out 0.3s;
+      transition: -webkit-transform ease-out 0.3s;
+      transition: transform ease-out 0.3s;
+      transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s;
+      display: inline-block; }
+    .post-preview__thumbnail:is(:hover, :focus) span {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
+    .post-preview__thumbnail img,
+    .post-preview__thumbnail svg {
+      -o-object-position: center;
+         object-position: center;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+    .post-preview__thumbnail_empty img,
+    .post-preview__thumbnail_empty svg {
+      width: auto;
+      height: auto;
+      -o-object-fit: none;
+         object-fit: none; }
+  .post-preview__title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    color: #26697D;
+    width: 100%;
+    text-align: left; }
+    .post-preview__title:is(:hover, :focus) {
+      text-decoration: underline; }
+  .post-preview__original {
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .post-preview__original:before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      background-color: #26697D;
+      margin-right: 8px; }
+
+.pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .pagination a,
+  .pagination span {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 5px;
+    font-weight: 500;
+    -webkit-transition: background-color ease-out 0.3s;
+    transition: background-color ease-out 0.3s; }
+  .pagination span {
+    background-color: #26697D;
+    color: #fff; }
+  .pagination a {
+    background-color: #F4F4F4;
+    color: #26697D; }
+    .pagination a:is(:hover, :focus) {
+      background-color: #26697D;
+      color: #fff; }
 
 /*# sourceMappingURL=main.min.css.map */

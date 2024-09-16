@@ -1,0 +1,35 @@
+.pagination{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+
+  a,
+  span{
+    text-decoration: none;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color ease-out $transition;
+  }
+
+  span{
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  a{
+    background-color: $gray-1;
+    color: $primary-color;
+
+    &:is(:hover, :focus){
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+}

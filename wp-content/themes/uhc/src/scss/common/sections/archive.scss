@@ -1,0 +1,32 @@
+.archive{
+  &-wrapper{
+    padding: 30px 0 170px;
+  }
+
+  &-head{
+    margin-bottom: 60px;
+    text-align: center;
+    h1{
+      margin-bottom: 40px;
+    }
+
+    &__descr{
+      margin: 0 auto 40px;
+      font-weight: $fw-bold;
+      max-width: 1065px;
+    }
+  }
+
+  &-body{
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px 30px;
+    }
+
+    .post-preview{
+      width: 100%;
+      max-width: calc(25% - 22.5px);
+    }
+  }
+}

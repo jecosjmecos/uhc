@@ -34,10 +34,14 @@ img {
 }
 
 .container {
+	&_short{
+		max-width: 1070px;
+	}
+
     @include make-container($gutter: $grid-gutter-width);
 
 	// For each breakpoint, define the maximum width of the container in a media query
-	@include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints)
+	@include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints);
 }
 
 /*************************/
