@@ -11,12 +11,15 @@ get_header();
 ?>
 
 <main class="main">
-	<?php
-	while( have_posts() ){
-		the_post();
-		the_content();
-	}
-	?>
+    <div class="container">
+
+        <?php
+        while( have_posts() ){
+            the_post();
+            the_content();
+        }
+        ?>
+    </div>
 </main>
 
 <?php

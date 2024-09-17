@@ -2620,4 +2620,16 @@ section {
       background-color: #26697D;
       color: #fff; }
 
+.page-head {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 40px; }
+  .page-head h1 {
+    line-height: normal;
+    margin-bottom: 40px; }
+  .page-head__excerpt {
+    font-weight: 700;
+    max-width: 1096px;
+    margin: 0 auto; }
+
 /*# sourceMappingURL=main.min.css.map */

@@ -31,10 +31,9 @@ add_action( 'init', 'init_theme' );
 function init_theme(){
 	load_theme_textdomain( 'UHC', get_stylesheet_directory() . '/languages' );
 
-	// Enable post thumbnails.
 	add_theme_support( 'post-thumbnails' );
+    add_post_type_support( 'page', 'excerpt' );
 
-	// Custom image sizes.
 	 add_image_size( 'logo', 150);
 	 add_image_size( 'logo-footer', 240);
 	 add_image_size( 'banner-slider', 1240, 440, 1);
