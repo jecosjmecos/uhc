@@ -43,6 +43,7 @@ function init_theme(){
 	 add_image_size( 'image-300-360', 300, 360, 1);
 	 add_image_size( 'image-358-471', 358, 471, 1);
 	 add_image_size( 'image-400-400', 400, 400, 1);
+	 add_image_size( 'image-500-500', 500, 500, 1);
 }
 
 /**

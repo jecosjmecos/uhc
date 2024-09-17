@@ -2632,4 +2632,24 @@ section {
     max-width: 1096px;
     margin: 0 auto; }
 
+.image-and-text {
+  padding-bottom: 50px;
+  padding-top: 50px; }
+  .image-and-text .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 73px; }
+  .image-and-text__image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    overflow: hidden; }
+  .image-and-text__text {
+    width: calc(100% - 573px);
+    font-size: 20px; }
+
 /*# sourceMappingURL=main.min.css.map */

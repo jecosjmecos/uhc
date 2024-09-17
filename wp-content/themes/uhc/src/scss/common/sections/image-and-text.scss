@@ -1,0 +1,21 @@
+.image-and-text{
+  padding-bottom: 50px;
+  padding-top: 50px;
+  .container{
+    display: flex;
+    align-items: center;
+    gap: 73px;
+  }
+
+  &__image{
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  &__text{
+    width: calc(100% - 573px);
+    font-size: $fs-xl;
+  }
+}
