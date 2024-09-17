@@ -6,6 +6,7 @@ if(!empty($logo)){
 }
 $thumbnail = get_the_post_thumbnail(null,'image-240-240');
 $thumbnail_class = empty($thumbnail) ? 'post-preview__thumbnail_empty' : '';
+$original_language = get_field('original_language') ? get_field('original_language') : __('in ukrainian', 'uhc');
 ?>
 <article class="post-preview">
     <a class="post-preview__thumbnail" href="<?php the_permalink(); ?>">
@@ -17,6 +18,6 @@ $thumbnail_class = empty($thumbnail) ? 'post-preview__thumbnail_empty' : '';
     </a>
 
     <div class="post-preview__original">
-        in Ukrainian
+        <?php echo $original_language ?>
     </div>
 </article>
