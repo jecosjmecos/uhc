@@ -1,0 +1,32 @@
+.buttons{
+  &-section{
+   .container{
+     display: flex;
+     flex-direction: column;
+     gap: 24px;
+   }
+  }
+
+  &-item{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+
+    .button{
+      width: 100%;
+      max-width: calc(100% - 50px);
+      margin: 0 auto;
+      transition: max-width ease-out $transition;
+
+      span{
+        &:nth-child(1){
+          flex: 1 1 auto;
+        }
+      }
+
+      &:is(:hover, :focus){
+        max-width: calc(100% - 20px);
+      }
+    }
+  }
+}
