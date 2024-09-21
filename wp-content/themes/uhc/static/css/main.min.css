@@ -2119,6 +2119,14 @@ section {
     padding: 32px 0;
     -webkit-transition: color ease-out 0.3s;
     transition: color ease-out 0.3s; }
+    .faq-item__head_Medium {
+      font-size: 24px; }
+    .faq-item__head_Small {
+      font-size: 16px; }
+    .faq-item__head span:nth-child(1) {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .faq-item__head span.number {
       min-width: 295px; }
       @media (max-width: 1400px) {

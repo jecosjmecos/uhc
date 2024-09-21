@@ -621,6 +621,36 @@
                                     "parent_repeater": "field_66d47fdc904a7"
                                 },
                                 {
+                                    "key": "field_66eec03292894",
+                                    "label": "Question font size",
+                                    "name": "question_font_size",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 3,
+                                    "choices": {
+                                        "Big": "Big",
+                                        "Medium": "Medium",
+                                        "Small": "Small"
+                                    },
+                                    "default_value": false,
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_66d47fdc904a7"
+                                },
+                                {
                                     "key": "field_66d4802c904a9",
                                     "label": "Answer",
                                     "name": "answer",
@@ -641,6 +671,25 @@
                                     "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0,
+                                    "parent_repeater": "field_66d47fdc904a7"
+                                },
+                                {
+                                    "key": "field_66eec08092895",
+                                    "label": "Read more",
+                                    "name": "read_more",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 3,
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0,
                                     "parent_repeater": "field_66d47fdc904a7"
                                 }
                             ]
@@ -1319,7 +1368,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 3,
                             "layout": "table",
                             "min": 0,
                             "max": 0,
@@ -1341,7 +1390,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "wpml_cf_preferences": 0,
+                                    "wpml_cf_preferences": 3,
                                     "return_format": "array",
                                     "allow_in_bindings": 0,
                                     "parent_repeater": "field_66eebacc36b66"
@@ -1377,5 +1426,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1726921454
+    "modified": 1726924311
 }

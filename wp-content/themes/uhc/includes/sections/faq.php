@@ -14,9 +14,13 @@ if (empty($text) && empty($faq)) return;
 
         <?php if (!empty($faq)): ?>
             <div class="faq">
-                <?php foreach ($faq as $faq_item): ?>
+                <?php
+                foreach ($faq as $faq_item):
+                    $head_class = !empty($faq_item['question_font_size']) ? $faq_item['question_font_size'] : '';
+                    $head_class = !empty($head_class) ? 'faq-item__head_' . $head_class : '';
+                    ?>
                     <div class="faq-item">
-                        <a class="faq-item__head" href="#">
+                        <a class="faq-item__head <?php echo $head_class ?>" href="#">
                             <span><?php echo $faq_item['question']  ?></span>
                             <span><?php echo $faq_icon ?></span>
                         </a>
@@ -27,7 +31,8 @@ if (empty($text) && empty($faq)) return;
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php
+                endforeach; ?>
             </div>
 
         <?php endif; ?>
