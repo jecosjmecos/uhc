@@ -7,6 +7,10 @@ if(!empty($logo)){
 $thumbnail = get_the_post_thumbnail(null,'image-240-240');
 $thumbnail_class = empty($thumbnail) ? 'post-preview__thumbnail_empty' : '';
 $original_language = get_field('original_language') ? get_field('original_language') : __('in ukrainian', 'uhc');
+
+$read_more_text = __('Читати більше', 'uhc');
+$read_more_icon = get_template_directory() . '/src/images/btn-arrow.svg';
+if(file_exists($read_more_icon)) $read_more_text .=  '<span class="icon">' . file_get_contents($read_more_icon) . '</span>';
 ?>
 <article class="post-preview">
     <a class="post-preview__thumbnail" href="<?php the_permalink(); ?>">
@@ -20,4 +24,8 @@ $original_language = get_field('original_language') ? get_field('original_langua
     <div class="post-preview__original">
         <?php echo $original_language ?>
     </div>
+
+    <a class="post-preview__read-more" href="<?php the_permalink(); ?>" >
+        <span><?php echo $read_more_text ?></span>
+    </a>
 </article>
