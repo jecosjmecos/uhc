@@ -6,8 +6,14 @@
  * @package WordPress
  * @subpackage UHC
  */
-global $wp_query;
+global $wp_query, $wp;
+$current_link = home_url( $wp->request );
+$taxonomy_obj = get_queried_object();
 $description = get_the_archive_description();
+$title = get_field('title', $taxonomy_obj->taxonomy . '_' . $taxonomy_obj->term_id);
+$links = get_field('links', $taxonomy_obj->taxonomy . '_' . $taxonomy_obj->term_id);
+
+if(empty($title)) $title = $taxonomy_obj->name;
 
 get_header();
 ?>
@@ -16,9 +22,22 @@ get_header();
         <div class="archive-wrapper">
             <div class="archive-head">
                 <div class="container">
-                    <h1><?php echo get_the_archive_title() ?></h1>
+                    <h1><?php echo $title ?></h1>
 
-                    <?php if (!empty($description)) echo '<div class="archive-head__descr">' . $description . '</div>' ?>
+                    <?php if (!empty($description)) echo '<div class="archive-head-descr">' . $description . '</div>' ?>
+
+                    <?php
+                    if(!empty($links)):
+                        echo '<div class="archive-head-links">';
+
+                        foreach ($links as $link) {
+                            $link_class = str_contains($current_link, $link['link']['url']) ? 'current' : '';
+
+                            echo get_theme_link($link['link'], $link_class);
+                        }
+
+                        echo '</div>';
+                    endif; ?>
                 </div>
             </div>
 

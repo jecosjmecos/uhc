@@ -10,10 +10,31 @@
       margin-bottom: 40px;
     }
 
-    &__descr{
+    &-descr{
       margin: 0 auto 40px;
       font-weight: $fw-bold;
       max-width: 1065px;
+    }
+
+    &-links{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px 63px;
+      
+      a{
+        text-transform: uppercase;
+        color: $gray-2;
+        text-decoration: none;
+
+        &:is(:hover, :focus){
+          color: $primary-color;
+        }
+
+        &.current{
+          color: $primary-color;
+        }
+      }
     }
   }
 

@@ -18,13 +18,14 @@
     &:before{
       border-radius: 0;
       max-height: 100%;
+      box-shadow: 5px 5px 13.1px 0px rgba(0, 0, 0, 0.25);
     }
   }
 
   &:before{
     content: '';
     border-radius: 50px;
-    transition: border-radius linear $transition;
+    transition: border-radius linear $transition, box-shadow linear $transition;
     background: $gray-1;
     position: absolute;
     top: 0;
@@ -131,7 +132,7 @@
     }
 
     &>span{
-      padding-top: 54px;
+      margin-top: 54px;
       display: flex;
       align-items: center;
       gap: 8px;
