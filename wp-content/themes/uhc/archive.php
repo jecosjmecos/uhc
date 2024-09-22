@@ -10,10 +10,16 @@ global $wp_query, $wp;
 $current_link = home_url( $wp->request );
 $taxonomy_obj = get_queried_object();
 $description = get_the_archive_description();
-$title = get_field('title', $taxonomy_obj->taxonomy . '_' . $taxonomy_obj->term_id);
-$links = get_field('links', $taxonomy_obj->taxonomy . '_' . $taxonomy_obj->term_id);
+$taxonomy_id = $taxonomy_obj->taxonomy . '_' . $taxonomy_obj->term_id;
+$title = get_field('title', $taxonomy_id) ? get_field('title', $taxonomy_id) : get_the_archive_title();
+$links = get_field('links', $taxonomy_id);
+$first_post_full_width = get_field('first_post_full_width', $taxonomy_id);
 
-if(empty($title)) $title = $taxonomy_obj->name;
+$posts_template = get_field('posts_template', $taxonomy_id);
+if(empty($posts_template)) $posts_template = '4 columns';
+
+$archive_body_class = !empty($posts_template) && $posts_template == '3 columns' ? 'archive-body_3-columns' : '';
+$post_image_size = !empty($posts_template) && $posts_template == '3 columns' ? 'image-400-400' : false;
 
 get_header();
 ?>
@@ -41,13 +47,24 @@ get_header();
                 </div>
             </div>
 
-            <div class="archive-body">
+            <div class="archive-body <?php echo $archive_body_class ?>">
                 <div class="container">
                     <?php
                     if (have_posts()):
+                        $i = 0;
                         while(have_posts()):
                             the_post();
-                            get_template_part('includes/parts/post', 'preview');
+
+                            if(!empty($first_post_full_width) && $i === 0){
+                                get_template_part('includes/parts/post', 'preview_full');
+                            }else{
+                                get_template_part('includes/parts/post', 'preview', [
+                                    'image_size' => 'full',
+                                    'posts_template' => get_field('posts_template', $taxonomy_id),
+                                ]);
+                            }
+
+                            $i++;
                         endwhile;
                     endif;
 

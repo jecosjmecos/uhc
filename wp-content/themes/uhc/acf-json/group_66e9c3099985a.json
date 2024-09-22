@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_66e9c30a3e12d",
-            "label": "Original language",
-            "name": "original_language",
+            "label": "Text width dot",
+            "name": "text_width_dot",
             "aria-label": "",
-            "type": "select",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,19 +16,13 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 0,
-            "choices": {
-                "in ukrainian": "in ukrainian",
-                "in english": "in english"
-            },
-            "default_value": "in ukrainian",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -50,5 +44,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1726595944
+    "modified": 1727023356
 }

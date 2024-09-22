@@ -21,6 +21,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px 63px;
+      padding-bottom: 40px;
       
       a{
         text-transform: uppercase;
@@ -29,6 +30,7 @@
 
         &:is(:hover, :focus){
           color: $primary-color;
+          text-decoration: underline;
         }
 
         &.current{
@@ -48,6 +50,13 @@
     .post-preview{
       width: 100%;
       max-width: calc(25% - 22.5px);
+    }
+
+    &_3-columns{
+      .post-preview{
+        width: 100%;
+        max-width: calc(33.33% - 20px);
+      }
     }
   }
 }
