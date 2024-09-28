@@ -17,6 +17,8 @@ if(!empty($logo)){
 }
 $thumbnail = wp_get_attachment_image( get_post_thumbnail_id($post_id), 'image-400-400' );
 $thumbnail_class = empty($thumbnail) ? 'single-post-head__thumbnail_empty' : '';
+
+$categories = get_the_category_list(', ');
 ?>
 
 <div class="single-post post-<?php echo esc_attr( $post_id ) ?>">
@@ -28,6 +30,8 @@ $thumbnail_class = empty($thumbnail) ? 'single-post-head__thumbnail_empty' : '';
             </div>
 
             <div class="single-post-head__title">
+                <?php if(!empty($categories)) echo '<div class="single-post-head__categories">' . $categories . '</div>'; ?>
+
                 <h1>
                     <?php the_title() ?>
                 </h1>

@@ -48,13 +48,29 @@
     &__title{
       max-width: calc(100% - 400px - 48px);
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
       flex: 1 1 auto;
 
       h1{
         font-size: 20px;
         text-transform: none;
         max-width: 633px;
+      }
+    }
+
+    &__categories{
+      text-transform: uppercase;
+      font-size: 16px;
+
+      a{
+        color: $primary-color;
+        text-decoration: none;
+        
+        &:is(:hover, :focus){
+          text-decoration: underline;
+        }
       }
     }
 
