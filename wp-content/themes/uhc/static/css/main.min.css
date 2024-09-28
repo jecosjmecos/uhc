@@ -2512,6 +2512,8 @@ section {
 .single-post-body {
   padding-bottom: 128px;
   font-size: 20px; }
+  .single-post-body .container {
+    max-width: 1070px; }
   .single-post-body__inner {
     padding-top: 123px; }
 

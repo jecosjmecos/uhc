@@ -122,6 +122,10 @@
     padding-bottom: 128px;
     font-size: 20px;
 
+    .container{
+      max-width: 1070px;
+    }
+
     &__inner{
       padding-top: 123px;
     }
