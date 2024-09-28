@@ -112,10 +112,10 @@ img.alignright,
 /*************************************/
 
 section{
-	padding: 60px 0;
+	margin: 120px 0;
 
 	&:last-of-type{
-		padding-bottom: 120px;
+		margin: 0 0 120px;
 	}
 }
 

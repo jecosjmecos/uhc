@@ -1412,9 +1412,9 @@ img.alignright,
 /* /End of the Styles for WP content */
 /*************************************/
 section {
-  padding: 60px 0; }
+  margin: 120px 0; }
   section:last-of-type {
-    padding-bottom: 120px; }
+    margin: 0 0 120px; }
 
 .swiper-button-prev, .swiper-button-next {
   z-index: 9;
@@ -1819,7 +1819,7 @@ section {
                 transform: translateX(-10px); }
 
 .banner-slider-section:first-child {
-  padding-top: 30px; }
+  margin-top: 30px; }
 
 .banner-slider .swiper-slide__inner {
   height: 440px;
@@ -2417,7 +2417,9 @@ section {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse; }
   .single-post-head_flexible-template {
-    margin-bottom: 60px; }
+    margin: 200px 0; }
+    .single-post-head_flexible-template:first-child {
+      margin: 0 0 60px; }
   .single-post-head__back {
     width: 100%; }
     .single-post-head__back a {
@@ -2873,5 +2875,40 @@ section {
               flex: 1 1 auto; }
     .buttons-item .button:is(:hover, :focus) {
       max-width: calc(100% - 20px); }
+
+.small-cards {
+  padding: 0;
+  margin: 60px 0; }
+  .small-cards-text {
+    margin-bottom: 40px; }
+  .small-cards-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px 50px; }
+  .small-cards-item {
+    width: calc(25% - 37.5px);
+    padding: 16px;
+    border-radius: 24px;
+    min-height: 132px;
+    background-color: #26697D;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    font-size: 16px; }
 
 /*# sourceMappingURL=main.min.css.map */
