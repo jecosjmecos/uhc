@@ -1278,9 +1278,6 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 24px; }
-  @media (min-width: 576px) {
-    h4, .h4 {
-      font-size: 20px; } }
 
 h5, .h5 {
   font-size: 20px; }
@@ -2121,6 +2118,8 @@ section {
       font-size: 24px; }
     .faq-item__head_Small {
       font-size: 16px; }
+      .faq-item__head_Small svg {
+        width: 30px; }
     .faq-item__head span:nth-child(1) {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 auto;

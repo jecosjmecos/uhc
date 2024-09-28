@@ -2,7 +2,7 @@
 $text = get_sub_field('text');
 $faq = get_sub_field('faq');
 $faq_icon = get_template_directory() . '/src/images/faq-arrow.svg';
-$faq_icon = file_exists($faq_icon) ? '<span>' . file_get_contents($faq_icon) . '</span>' : '';
+$faq_icon = file_exists($faq_icon) ? file_get_contents($faq_icon) : '';
 
 if (empty($text) && empty($faq)) return;
 ?>
@@ -22,7 +22,7 @@ if (empty($text) && empty($faq)) return;
                     <div class="faq-item">
                         <a class="faq-item__head <?php echo $head_class ?>" href="#">
                             <span><?php echo $faq_item['question']  ?></span>
-                            <span><?php echo $faq_icon ?></span>
+                            <span class="arrow"><?php echo $faq_icon ?></span>
                         </a>
 
                         <div class="faq-item__body">
