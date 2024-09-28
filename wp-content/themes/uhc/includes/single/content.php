@@ -19,7 +19,7 @@ $thumbnail = wp_get_attachment_image( get_post_thumbnail_id($post_id), 'image-40
 $thumbnail_class = empty($thumbnail) ? 'single-post-head__thumbnail_empty' : '';
 ?>
 
-<article class="single-post post-<?php echo esc_attr( $post_id ) ?>">
+<div class="single-post post-<?php echo esc_attr( $post_id ) ?>">
 
     <div class="single-post-head">
         <div class="container">
@@ -44,5 +44,5 @@ $thumbnail_class = empty($thumbnail) ? 'single-post-head__thumbnail_empty' : '';
             <?php if(get_the_content()) echo '<div class="single-post-body__inner">' . get_the_content() . '</div>'; ?>
         </div>
     </div>
-</article><!-- .single-post -->
+</div><!-- .single-post -->
 

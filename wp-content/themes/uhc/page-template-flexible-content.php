@@ -2,6 +2,7 @@
 
 /**
  * Template name: Flexible content
+ * Template Post Type: post, page
  */
 
 get_header();
