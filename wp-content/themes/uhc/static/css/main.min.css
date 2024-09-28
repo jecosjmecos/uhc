@@ -2922,6 +2922,11 @@ section {
 .text-columns_3 .text-columns-item {
   width: calc(33.33% - 26.6px); }
 
+.text-columns_center .text-columns-items {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .text-in-frame {
   color: #fff; }
   .text-in-frame__inner {

@@ -1,10 +1,12 @@
 <?php
 $title = get_sub_field('title');
 $columns = get_sub_field('columns');
+$alignment = get_sub_field('alignment');
 $text = get_sub_field('text');
 $section_class = '';
 
-if($columns === '3') $section_class = 'text-columns_3';
+if($columns === '3') $section_class .= 'text-columns_3';
+if($alignment === 'center') $section_class .= ' text-columns_center';
 
 if(empty($title) && empty($text)) return;
 ?>

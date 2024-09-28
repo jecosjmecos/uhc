@@ -15,4 +15,10 @@
       width: calc(33.33% - 26.6px);
     }
   }
+
+  &_center{
+    .text-columns-items{
+      align-items: center;
+    }
+  }
 }
