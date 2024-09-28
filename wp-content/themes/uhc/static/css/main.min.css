@@ -2922,4 +2922,15 @@ section {
 .text-columns_3 .text-columns-item {
   width: calc(33.33% - 26.6px); }
 
+.text-in-frame {
+  color: #fff; }
+  .text-in-frame__inner {
+    margin: 0 auto;
+    max-width: 752px;
+    background-color: #26697D;
+    border-radius: 50px;
+    padding: 32px 46px; }
+    .text-in-frame__inner > *:last-child {
+      margin-bottom: 0; }
+
 /*# sourceMappingURL=main.min.css.map */

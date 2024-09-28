@@ -1,0 +1,15 @@
+.text-in-frame{
+  color: $white;
+
+  &__inner{
+    margin: 0 auto;
+    max-width: 752px;
+    background-color: $primary-color;
+    border-radius: 50px;
+    padding: 32px 46px;
+
+    &>*:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
