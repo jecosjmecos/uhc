@@ -1286,7 +1286,7 @@ h5, .h5 {
   font-size: 20px; }
 
 h6, .h6 {
-  font-size: 18px; }
+  font-size: 16px; }
 
 a {
   display: inline-block;
@@ -1298,8 +1298,6 @@ a {
 
 p {
   margin-top: 0; }
-  p:last-of-type {
-    margin-bottom: 0; }
 
 b, strong {
   font-weight: 700; }
@@ -2403,7 +2401,7 @@ section {
   padding-bottom: 20px; }
 
 .single-post-head {
-  padding-top: 70px; }
+  margin-top: 70px; }
   .single-post-head .container {
     display: -webkit-box;
     display: -ms-flexbox;

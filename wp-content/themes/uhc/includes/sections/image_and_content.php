@@ -22,9 +22,12 @@ if (!empty($back_link['title'])) $back_link['title'] = $icon . $back_link['title
 
 <div class="single-post-head single-post-head_flexible-template <?php echo $section_class ?>">
     <div class="container">
-        <div class="single-post-head__back">
-            <?php echo get_theme_link($back_link) ?>
-        </div>
+
+        <?php
+        if(!empty($back_link)){
+            echo '<div class="single-post-head__back">' . get_theme_link($back_link) . '</div>';
+        }  ?>
+
 
         <div class="single-post-head__text">
             <div class="single-post-head__text-inner">

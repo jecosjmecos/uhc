@@ -42,7 +42,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-	font-size: $fs-lg;
+	font-size: $fs-md;
 }
 
 a {
@@ -57,10 +57,6 @@ a {
 
 p {
 	margin-top: 0;
-
-	&:last-of-type {
-		margin-bottom: 0;
-	}
 }
 
 b, strong {
