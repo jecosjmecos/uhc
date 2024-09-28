@@ -1,0 +1,13 @@
+.logos{
+  &-text{
+    font-size: 8px;
+    margin-bottom: 24px;
+  }
+
+  &-items{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+  }
+}
