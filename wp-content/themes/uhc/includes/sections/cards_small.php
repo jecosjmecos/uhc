@@ -14,16 +14,11 @@ if(empty($text) && empty($cards)) return;
             echo '<div class="small-cards-items">';
 
             foreach($cards as $card):
-                $background = !empty($card['image']) ? wp_get_attachment_image_url($card['image'], 'thumbnail') : '';
-                if(!empty($background)) $background = 'style="background-image: url(' . $background . ');"';
-
-                $text_color = !empty($card['text_color']) ? 'style="color: ' . $card['text_color'] . ';"' : '';
 
                 printf(
-                    '<div class="small-cards-item" %s><span %s>%s</span></div>',
-                    $background,
-                    $text_color,
-                    $card['text']
+                    '<div class="small-cards-item"><span>%s</span><span class="text-hover">%s</span></div>',
+                    $card['text'],
+                    $card['text_hover']
                 );
             endforeach;
 

@@ -1,32 +1,55 @@
-.small-cards{
+.small-cards {
   padding: 0;
   margin: 60px 0;
 
-  &-text{
+  &-text {
     margin-bottom: 40px;
   }
 
-  &-items{
+  &-items {
     display: flex;
     flex-wrap: wrap;
     gap: 30px 50px;
   }
 
-  &-item{
+  &-item {
     width: calc(25% - 37.5px);
     padding: 16px;
     border-radius: 24px;
     min-height: 132px;
-    background-color: $primary-color;
+    background-color: $gray-3;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: $white;
+    color: $primary-color;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: $fw-bold;
     font-size: 16px;
+    position: relative;
+    overflow: hidden;
+
+    .text-hover {
+      position: absolute;
+      background-color: $primary-color;
+      padding: 16px;
+      font-weight: $fw-regular;
+      color: $white;
+      inset: 0;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity ease-out $transition;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      .text-hover {
+        opacity: 1;
+      }
+    }
   }
 }

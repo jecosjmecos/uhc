@@ -648,11 +648,11 @@
                                     "parent_repeater": "field_66f8023136723"
                                 },
                                 {
-                                    "key": "field_66f8024436725",
-                                    "label": "Image",
-                                    "name": "image",
+                                    "key": "field_66f9068fc5446",
+                                    "label": "Text (hover)",
+                                    "name": "text_hover",
                                     "aria-label": "",
-                                    "type": "image",
+                                    "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -661,39 +661,13 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "wpml_cf_preferences": 3,
-                                    "return_format": "id",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "allow_in_bindings": 0,
-                                    "preview_size": "medium",
-                                    "parent_repeater": "field_66f8023136723"
-                                },
-                                {
-                                    "key": "field_66f8080ccd13f",
-                                    "label": "Text color",
-                                    "name": "text_color",
-                                    "aria-label": "",
-                                    "type": "color_picker",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "wpml_cf_preferences": 3,
+                                    "wpml_cf_preferences": 0,
                                     "default_value": "",
-                                    "enable_opacity": 0,
-                                    "return_format": "string",
+                                    "maxlength": "",
                                     "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
                                     "parent_repeater": "field_66f8023136723"
                                 }
                             ]
@@ -1910,5 +1884,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1727535302
+    "modified": 1727596194
 }

@@ -2906,11 +2906,11 @@ section {
     padding: 16px;
     border-radius: 24px;
     min-height: 132px;
-    background-color: #26697D;
+    background-color: #C4C4C4;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #26697D;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2922,7 +2922,31 @@ section {
         -ms-flex-align: center;
             align-items: center;
     font-weight: 700;
-    font-size: 16px; }
+    font-size: 16px;
+    position: relative;
+    overflow: hidden; }
+    .small-cards-item .text-hover {
+      position: absolute;
+      background-color: #26697D;
+      padding: 16px;
+      font-weight: 400;
+      color: #fff;
+      inset: 0;
+      opacity: 0;
+      z-index: 1;
+      -webkit-transition: opacity ease-out 0.3s;
+      transition: opacity ease-out 0.3s;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .small-cards-item:hover .text-hover {
+      opacity: 1; }
 
 .text-columns-items {
   display: -webkit-box;
