@@ -77,8 +77,13 @@ if( function_exists( 'acf_add_options_page' ) ){
 	);
 }
 
+function google_map_api_key()
+{
+    return 'AIzaSyCfjg5wFo7Lv98-2fPXuTHyLYsrxSrHRF4';
+}
+
 function my_acf_init() {
-    acf_update_setting('google_api_key', 'AIzaSyCfjg5wFo7Lv98-2fPXuTHyLYsrxSrHRF4');
+    acf_update_setting('google_api_key', google_map_api_key());
 }
 
 add_action('acf/init', 'my_acf_init');

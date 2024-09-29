@@ -1,0 +1,14 @@
+.contacts{
+  &-address{
+    .acf-map {
+      height: 432px;
+      width: 100%;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    .acf-map img {
+      max-width: inherit !important;
+    }
+  }
+}
