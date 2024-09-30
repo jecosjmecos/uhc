@@ -1536,7 +1536,12 @@ textarea {
     font-weight: 400;
     font-size: 12px;
     border: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-transition: padding ease-out 0.3s;
+    transition: padding ease-out 0.3s; }
+    .input-field .btn:is(:hover, :focus) {
+      padding-right: 30px;
+      padding-left: 30px; }
 
 .wpcf7-not-valid-tip {
   text-align: right;
@@ -2741,7 +2746,8 @@ textarea {
     .post-preview__original_top {
       padding-top: 0;
       font-size: 16px;
-      margin-bottom: 12px; }
+      margin-bottom: 12px;
+      min-height: 40px; }
   .post-preview__read-more {
     font-weight: 700;
     font-size: 14px;
@@ -3094,5 +3100,68 @@ textarea {
     margin-bottom: 48px; }
   .contacts-content .wpcf7 {
     max-width: 550px; }
+
+.contacts-social {
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 22px; }
+  .contacts-social__title {
+    background-color: #26697D;
+    color: #fff;
+    min-height: 132px;
+    font-size: 22px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    font-weight: 700;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+    border-radius: 24px;
+    text-transform: uppercase; }
+  .contacts-social__link {
+    min-height: 132px;
+    padding: 28px 16px;
+    background-color: #C4C4C4;
+    border-radius: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #26697D;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-transition: color ease-out 0.3s, background-color ease-out 0.3s;
+    transition: color ease-out 0.3s, background-color ease-out 0.3s;
+    min-width: 210px; }
+    .contacts-social__link span svg {
+      min-width: 32px;
+      min-height: 32px; }
+      .contacts-social__link span svg path {
+        -webkit-transition: fill ease-out 0.3s;
+        transition: fill ease-out 0.3s; }
+    .contacts-social__link span:nth-child(2) {
+      margin-top: 36px; }
+    .contacts-social__link:is(:hover, :focus) {
+      background-color: #26697D;
+      color: #fff; }
+      .contacts-social__link:is(:hover, :focus) svg path {
+        fill: #fff; }
 
 /*# sourceMappingURL=main.min.css.map */

@@ -47,6 +47,12 @@ textarea{
     font-size: 12px;
     border: none;
     text-transform: uppercase;
+    transition: padding ease-out $transition;
+
+    &:is(:hover, :focus){
+      padding-right: 30px;
+      padding-left: 30px;
+    }
   }
 }
 
