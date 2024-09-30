@@ -17,6 +17,16 @@ textarea{
   flex-direction: column;
   gap: 8px;
 
+  &_submit{
+    flex-direction: row;
+    align-items: center;
+
+    .wpcf7-spinner{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   label{
     margin-bottom: 0;
     width: 100%;
@@ -38,4 +48,16 @@ textarea{
     border: none;
     text-transform: uppercase;
   }
+}
+
+.wpcf7-not-valid-tip{
+  text-align: right;
+  font-size: 12px;
+  padding-top: 2px;
+}
+
+.wpcf7-response-output{
+  border-radius: 12px;
+  margin-left: 0;
+  margin-right: 0;
 }

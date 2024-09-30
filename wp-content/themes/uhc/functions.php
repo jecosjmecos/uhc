@@ -60,6 +60,12 @@ function inclusion_enqueue(){
 //	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', ['main'], $ver_num, 'all' );
 
 	// Scripts.
+    $google_api_key = google_map_api_key();
+
+    if (!empty($google_api_key)) {
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $google_api_key . '&callback=Function.prototype', ['jquery'], $ver_num, true );
+    }
+
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/static/js/main.min.js', ['jquery'], $ver_num, true );
 }
 add_action( 'wp_enqueue_scripts', 'inclusion_enqueue' );

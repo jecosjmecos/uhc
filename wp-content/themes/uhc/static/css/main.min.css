@@ -1508,6 +1508,17 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px; }
+  .input-field_submit {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .input-field_submit .wpcf7-spinner {
+      margin-left: 0;
+      margin-right: 0; }
   .input-field label {
     margin-bottom: 0;
     width: 100%;
@@ -1526,6 +1537,16 @@ textarea {
     font-size: 12px;
     border: none;
     text-transform: uppercase; }
+
+.wpcf7-not-valid-tip {
+  text-align: right;
+  font-size: 12px;
+  padding-top: 2px; }
+
+.wpcf7-response-output {
+  border-radius: 12px;
+  margin-left: 0;
+  margin-right: 0; }
 
 .header {
   font-weight: 700;

@@ -53,9 +53,3 @@ function remove_archive_title_prefix($title) {
 
 add_filter('get_the_archive_title', 'remove_archive_title_prefix');
 
-function show_acf_google_map() {
-    get_template_part('includes/parts/acf-google-map-header');
-}
-
-add_action('get_header', 'show_acf_google_map');
-
