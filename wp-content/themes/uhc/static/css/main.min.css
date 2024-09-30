@@ -1507,7 +1507,8 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 8px; }
+  gap: 8px;
+  margin-bottom: 32px; }
   .input-field_submit {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3100,6 +3101,8 @@ textarea {
     margin-bottom: 48px; }
   .contacts-content .wpcf7 {
     max-width: 550px; }
+    .contacts-content .wpcf7 textarea {
+      height: 80px; }
 
 .contacts-social {
   margin-top: 120px;
