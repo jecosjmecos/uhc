@@ -17,6 +17,14 @@ $address_text = get_field('address_text', 'option');
                     </div>
                 </div>
             <?php endif; ?>
+
+            <?php if($address_text['label']) echo '<div class="contacts-address__label">' . $address_text['label'] . '</div>'; ?>
+
+            <?php if($address_text['text']) echo '<div class="contacts-address__text">' . $address_text['text'] . '</div>'; ?>
+        </div>
+
+        <div class="contacts-content">
+            <?php echo $text ?>
         </div>
     </div>
 </section>

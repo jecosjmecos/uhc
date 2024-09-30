@@ -1487,6 +1487,46 @@ section {
     .button:is(:hover, :focus) span:nth-child(2) {
       margin-left: 10px; }
 
+input,
+textarea {
+  min-height: 40px;
+  border: 1px solid #26697D;
+  border-radius: 12px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+textarea {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px; }
+  .input-field label {
+    margin-bottom: 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 12px; }
+  .input-field input,
+  .input-field textarea {
+    width: 100%; }
+  .input-field .btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-radius: 12px;
+    min-height: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    text-transform: uppercase; }
+
 .header {
   font-weight: 700;
   position: fixed;
@@ -2993,13 +3033,45 @@ section {
       flex-wrap: wrap;
   gap: 30px 40px; }
 
-.contacts-address .acf-map {
-  height: 432px;
-  width: 100%;
-  border-radius: 50px;
-  overflow: hidden; }
+.contacts:first-child {
+  margin-top: 50px; }
 
-.contacts-address .acf-map img {
-  max-width: inherit !important; }
+.contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px 94px; }
+
+.contacts-address {
+  width: 100%;
+  max-width: 456px; }
+  .contacts-address .acf-map {
+    height: 432px;
+    width: 100%;
+    border-radius: 50px;
+    overflow: hidden; }
+  .contacts-address .acf-map img {
+    max-width: inherit !important; }
+  .contacts-address__label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 4px; }
+    .contacts-address__label:nth-child(2) {
+      margin-top: 24px; }
+  .contacts-address__text {
+    margin-top: 4px; }
+    .contacts-address__text:nth-child(2) {
+      margin-top: 24px; }
+
+.contacts-content {
+  width: 100%;
+  max-width: calc(100% - 456px - 94px); }
+  .contacts-content h2 {
+    margin-bottom: 48px; }
+  .contacts-content .wpcf7 {
+    max-width: 550px; }
 
 /*# sourceMappingURL=main.min.css.map */

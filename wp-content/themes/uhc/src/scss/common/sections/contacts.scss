@@ -1,5 +1,18 @@
 .contacts{
+  &:first-child{
+    margin-top: 50px;
+  }
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 94px;
+  }
+
   &-address{
+    width: 100%;
+    max-width: 456px;
+
     .acf-map {
       height: 432px;
       width: 100%;
@@ -9,6 +22,38 @@
 
     .acf-map img {
       max-width: inherit !important;
+    }
+
+    &__label{
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+      font-size: 16px;
+      margin-top: 4px;
+
+      &:nth-child(2){
+        margin-top: 24px;
+      }
+    }
+
+    &__text{
+      margin-top: 4px;
+
+      &:nth-child(2){
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &-content{
+    width: 100%;
+    max-width: calc(100% - 456px - 94px);
+
+    h2{
+      margin-bottom: 48px;
+    }
+
+    .wpcf7{
+      max-width: 550px;
     }
   }
 }
