@@ -82,11 +82,13 @@ if(!empty($logo)) $logo = wp_get_original_image_path($logo);
                     'menu_class' => 'header-menu',
                     'menu_id' => 'headerMenu',
                 ]);
+
+                get_template_part('includes/parts/mobile-menu');
                 ?>
-                
-                <div class="header-burger">
+
+                <a href="#" id="headerBurger" class="header-burger">
                     <span></span>
-                </div>
+                </a>
             </div>
         </div>
     </header>

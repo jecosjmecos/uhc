@@ -1566,6 +1566,9 @@ textarea {
     background-color: #26697D;
     color: #fff;
     padding: 5px; }
+    @media (max-width: 1299.98px) {
+      .header_top {
+        display: none; } }
     .header_top .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1576,7 +1579,7 @@ textarea {
       line-height: normal; }
   .header_bottom {
     padding: 30px 0; }
-    .header_bottom .container {
+    .header_bottom > .container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1631,7 +1634,7 @@ textarea {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
-      @media (max-width: 991.98px) {
+      @media (max-width: 1299.98px) {
         .header-menu-wrapper {
           display: none; } }
     .header-menu ul {
@@ -1718,6 +1721,144 @@ textarea {
         transition: opacity ease-out 0.3s; }
       .header-menu a:is(:hover, :focus):after {
         opacity: 1; }
+  .header-burger {
+    display: none;
+    height: 36px;
+    width: 36px;
+    position: relative;
+    margin-left: auto; }
+    @media (max-width: 1299.98px) {
+      .header-burger {
+        display: block; } }
+    .header-burger span {
+      height: 2px;
+      width: 18px;
+      background-color: #26697D;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border-radius: 5px;
+      -webkit-transition: background-color ease-out 0.3s;
+      transition: background-color ease-out 0.3s; }
+      .header-burger span:before, .header-burger span:after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: #26697D;
+        left: 50%;
+        top: 0;
+        -webkit-transition: -webkit-transform ease-out 0.3s;
+        transition: -webkit-transform ease-out 0.3s;
+        transition: transform ease-out 0.3s;
+        transition: transform ease-out 0.3s, -webkit-transform ease-out 0.3s; }
+      .header-burger span:before {
+        -webkit-transform: translate(-50%, -5px);
+            -ms-transform: translate(-50%, -5px);
+                transform: translate(-50%, -5px); }
+      .header-burger span:after {
+        -webkit-transform: translate(-50%, 5px);
+            -ms-transform: translate(-50%, 5px);
+                transform: translate(-50%, 5px); }
+  .header .mobile-menu-area {
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    overflow: auto;
+    max-height: 100vh;
+    -webkit-transition: opacity ease-out 0.3s, -webkit-transform ease-out 0.3s;
+    transition: opacity ease-out 0.3s, -webkit-transform ease-out 0.3s;
+    transition: opacity ease-out 0.3s, transform ease-out 0.3s;
+    transition: opacity ease-out 0.3s, transform ease-out 0.3s, -webkit-transform ease-out 0.3s;
+    pointer-events: none;
+    -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0; }
+    .header .mobile-menu-area-head {
+      position: fixed;
+      z-index: 3;
+      background-color: #fff;
+      top: 0;
+      left: 0;
+      right: 0; }
+    .header .mobile-menu-area-social {
+      padding: 40px 0 0 0;
+      margin: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 48px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .header .mobile-menu-area-social li {
+        list-style-type: none; }
+    .header .mobile-menu-area .wpml-ls-legacy-list-horizontal {
+      padding-top: 40px; }
+      .header .mobile-menu-area .wpml-ls-legacy-list-horizontal ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 35px; }
+        .header .mobile-menu-area .wpml-ls-legacy-list-horizontal ul li a {
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #26697D;
+          padding: 0; }
+  .header-mobile-menu {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px; }
+    .header-mobile-menu li {
+      list-style-type: none; }
+      .header-mobile-menu li a {
+        color: #26697D;
+        text-decoration: none; }
+    .header-mobile-menu .sub-menu {
+      display: none; }
+
+.header-menu-opened {
+  overflow: hidden; }
+  .header-menu-opened .header-burger {
+    z-index: 2; }
+    .header-menu-opened .header-burger span {
+      background-color: transparent; }
+      .header-menu-opened .header-burger span:before {
+        -webkit-transform: rotate(45deg) translate(-50%, 9px);
+            -ms-transform: rotate(45deg) translate(-50%, 9px);
+                transform: rotate(45deg) translate(-50%, 9px); }
+      .header-menu-opened .header-burger span:after {
+        -webkit-transform: rotate(-45deg) translate(-50%, -9px);
+            -ms-transform: rotate(-45deg) translate(-50%, -9px);
+                transform: rotate(-45deg) translate(-50%, -9px); }
+  .header-menu-opened .header-logo {
+    position: relative;
+    z-index: 2; }
+  .header-menu-opened .mobile-menu-area {
+    pointer-events: auto;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
 
 .footer {
   background-color: #26697D;
@@ -1884,14 +2025,13 @@ textarea {
   margin-top: 30px; }
 
 .banner-slider .swiper-slide__inner {
-  height: 440px;
   overflow: hidden;
   border-radius: 50px; }
   .banner-slider .swiper-slide__inner img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
+    -o-object-fit: contain;
+       object-fit: contain; }
 
 .banner-slider .swiper-pagination {
   bottom: 28px; }
