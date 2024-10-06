@@ -27,27 +27,30 @@ if(file_exists($read_more_icon)) $read_more_text .=  '<span class="icon">' . fil
         <?php echo '<span>' . (!empty($thumbnail) ? $thumbnail : $logo) . '</span>' ?>
     </a>
 
-    <a class="post-preview__title" href="<?php the_permalink(); ?>">
-        <?php the_title() ?>
-    </a>
+    <div class="post-preview__content-wrapper">
 
-    <?php if(get_the_excerpt() && $posts_template == '3 columns'): ?>
+        <a class="post-preview__title" href="<?php the_permalink(); ?>">
+            <?php the_title() ?>
+        </a>
 
-        <div class="post-preview__excerpt">
-            <?php the_excerpt(); ?>
-        </div>
+        <?php if(get_the_excerpt() && $posts_template == '3 columns'): ?>
 
-    <?php endif; ?>
+            <div class="post-preview__excerpt">
+                <?php the_excerpt(); ?>
+            </div>
 
-    <?php if(!empty($text_width_dot) && $posts_template != '3 columns'): ?>
+        <?php endif; ?>
 
-        <div class="post-preview__original">
-            <?php echo $text_width_dot ?>
-        </div>
+        <?php if(!empty($text_width_dot) && $posts_template != '3 columns'): ?>
 
-    <?php endif; ?>
+            <div class="post-preview__original">
+                <?php echo $text_width_dot ?>
+            </div>
 
-    <a class="post-preview__read-more" href="<?php the_permalink(); ?>" >
-        <span><?php echo $read_more_text ?></span>
-    </a>
+        <?php endif; ?>
+
+        <a class="post-preview__read-more" href="<?php the_permalink(); ?>" >
+            <span><?php echo $read_more_text ?></span>
+        </a>
+    </div>
 </article>
