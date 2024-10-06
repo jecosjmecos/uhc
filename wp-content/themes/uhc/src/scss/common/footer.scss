@@ -34,7 +34,7 @@
       padding-right: 110px;
       gap: 30px;
 
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         padding-right: 0;
       }
 
