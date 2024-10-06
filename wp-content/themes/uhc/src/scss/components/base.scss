@@ -114,8 +114,16 @@ img.alignright,
 section{
 	margin: 120px 0;
 
+	@include media-breakpoint-down(md){
+		margin: 60px 0;
+	}
+
 	&:last-of-type{
 		margin: 0 0 120px;
+
+		@include media-breakpoint-down(md){
+			margin: 0 0 60px;
+		}
 	}
 }
 
@@ -127,8 +135,25 @@ section{
 			height: 42px;
 			width: 42px;
 
+			@include media-breakpoint-down(md){
+				height: 30px;
+				width: 30px;
+			}
+
 			&:after{
 				display: none;
+			}
+		}
+
+		&-prev{
+			@include media-breakpoint-down(md){
+				left: 0;
+			}
+		}
+
+		&-next{
+			@include media-breakpoint-down(md){
+				right: 0;
 			}
 		}
 	}
@@ -147,10 +172,20 @@ section{
 			background-color: $gray-2;
 			opacity: 1;
 
+			@include media-breakpoint-down(sm){
+				height: 14px;
+				width: 14px;
+			}
+
 			&-active{
 				height: 24px;
 				width: 24px;
 				background-color: $white;
+
+				@include media-breakpoint-down(sm){
+					height: 20px;
+					width: 20px;
+				}
 			}
 		}
 
@@ -168,6 +203,10 @@ section{
 	margin: 0 auto;
 	padding: 60px 40px;
 	color: $white;
+
+	@include media-breakpoint-down(md){
+		padding: 30px;
+	}
 }
 
 .mgt-100{

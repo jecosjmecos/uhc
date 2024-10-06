@@ -19,6 +19,10 @@
       padding: 32px 0;
       transition: color ease-out $transition;
 
+      @include media-breakpoint-down(xs){
+        font-size: 24px;
+      }
+
       &_Medium{
         font-size: 24px;
       }
@@ -45,6 +49,20 @@
         }
         &.arrow{
           margin-left: auto;
+
+          @include media-breakpoint-down(xs){
+            height: 32px;
+            width: 32px;
+          }
+
+          svg{
+            width: 100%;
+            height: 100%;
+
+            path{
+              fill: $primary-color;
+            }
+          }
         }
       }
 
@@ -57,9 +75,11 @@
       &:is(:hover, :focus){
         color: $gray-2;
 
-        svg{
-          path{
-            fill: $gray-2;
+        .arrow{
+          svg{
+            path{
+              fill: $gray-2;
+            }
           }
         }
       }
@@ -69,7 +89,7 @@
       overflow: hidden;
       transition: max-height ease-in-out $transition;
       max-height: 0;
-      
+
       &-inner{
         padding-bottom: 32px;
 
@@ -81,11 +101,11 @@
             gap: 55px;
           }
         }
-        
+
         a{
           color: $primary-color;
           text-decoration: underline;
-          
+
           &:is(:hover, :focus){
             text-decoration: none;
           }
@@ -117,7 +137,7 @@
         }
       }
     }
-    
+
     &.active{
       border-color: $gray-2;
 
@@ -125,6 +145,12 @@
         span{
           &.arrow{
             transform: rotate(180deg);
+
+            svg{
+              path{
+                fill: $gray-2;
+              }
+            }
           }
         }
       }

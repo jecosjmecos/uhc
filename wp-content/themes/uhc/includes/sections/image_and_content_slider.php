@@ -40,6 +40,9 @@ if(empty($slider)) return;
             </div>
 
             <div class="swiper-pagination swiper-pagination_alt"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>

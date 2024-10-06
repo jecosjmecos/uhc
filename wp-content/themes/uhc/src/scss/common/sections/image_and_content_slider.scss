@@ -6,6 +6,22 @@
     border-radius: 50px;
     overflow: hidden;
 
+    @include media-breakpoint-down(md){
+      width: 350px;
+      min-width: 350px;
+    }
+
+    @include media-breakpoint-down(sm){
+      border-radius: 24px;
+    }
+
+    @include media-breakpoint-down(xs){
+      height: 300px;
+      max-width: 450px;
+      min-width: auto;
+      width: 100%;
+    }
+
     img{
       object-fit: cover;
       width: 100%;
@@ -20,8 +36,27 @@
     gap: 64px;
     width: 100%;
 
+    @include media-breakpoint-down(md){
+      gap: 30px;
+    }
+
+    @include media-breakpoint-down(xs){
+      font-size: 14px;
+    }
+
+    div{
+      &>*:last-child{
+        margin-bottom: 0;
+      }
+    }
+
     &>h2{
       margin-bottom: 0;
+
+      @include media-breakpoint-down(sm){
+        text-align: center;
+        padding: 0 63px;
+      }
     }
 
     ul{
@@ -56,6 +91,10 @@
           align-items: center;
           justify-content: space-between;
           gap: 30px;
+
+          @include media-breakpoint-down(sm){
+            flex-direction: column;
+          }
         }
       }
 
@@ -64,6 +103,42 @@
         bottom: 0;
         left: 0;
         right: 0;
+
+        @include media-breakpoint-down(xs){
+          display: none;
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next{
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        @include media-breakpoint-down(sm){
+          display: flex;
+          top: 400px;
+        }
+
+        @include media-breakpoint-down(xs){
+          top: 350px;
+        }
+
+        svg{
+          width: 20px;
+          height: 20px;
+          path{
+            fill: $primary-color;
+          }
+        }
+      }
+
+      .swiper-button-prev{
+        left: 35px;
+      }
+
+      .swiper-button-next{
+        right: 35px;
       }
     }
   }

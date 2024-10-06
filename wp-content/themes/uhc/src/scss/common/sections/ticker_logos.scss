@@ -3,6 +3,10 @@
     h2{
       text-align: center;
       margin-bottom: 64px;
+
+      @include media-breakpoint-down(xs){
+        margin-bottom: 24px;
+      }
     }
   }
 

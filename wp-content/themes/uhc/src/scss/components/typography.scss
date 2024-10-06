@@ -18,27 +18,51 @@ h6, .h6 {
 h1, .h1 {
 	font-size: 60px;
 	margin-bottom: 24px;
+
+	@include media-breakpoint-down(sm){
+		font-size: 36px;
+	}
 }
 
 h2, .h2 {
 	font-size: 36px;
 	margin-bottom: 32px;
+
+	@include media-breakpoint-down(sm){
+		font-size: 24px;
+	}
 }
 
 h3, .h3 {
 	font-size: 30px;
+
+	@include media-breakpoint-down(sm){
+		font-size: 22px;
+	}
 }
 
 h4, .h4 {
 	font-size: 24px;
+
+	@include media-breakpoint-down(sm){
+		font-size: 20px;
+	}
 }
 
 h5, .h5 {
 	font-size: $fs-xl;
+
+	@include media-breakpoint-down(sm){
+		font-size: 18px;
+	}
 }
 
 h6, .h6 {
 	font-size: $fs-md;
+
+	@include media-breakpoint-down(sm){
+		font-size: 16px;
+	}
 }
 
 a {

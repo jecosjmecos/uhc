@@ -52,21 +52,12 @@ class SiteSliders{
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
             autoplay: {
                 delay: 5000,
-            },
-        });
-    }
-
-    initCardsSlider(){
-        const cardsSlider = new Swiper('.cards-slider .swiper', {
-            loop: true,
-            speed: 800,
-            slidesPerView: 3,
-            spaceBetween: 64,
-            navigation: {
-                nextEl: ".cards-slider .swiper-button-next",
-                prevEl: ".cards-slider .swiper-button-prev",
             },
             breakpoints: {
                 320: {
@@ -76,7 +67,7 @@ class SiteSliders{
 
                 },
                 768: {
-
+                    spaceBetween: 20,
                 },
                 992: {
                     spaceBetween: 32,
@@ -86,6 +77,64 @@ class SiteSliders{
                 },
             },
         });
+    }
+
+    initCardsSlider(){
+        let swiperInstance;
+
+        const swiperInit = () => {
+            swiperInstance = new Swiper('.cards-slider .swiper', {
+                loop: true,
+                speed: 800,
+                slidesPerView: 3,
+                spaceBetween: 64,
+                navigation: {
+                    nextEl: ".cards-slider .swiper-button-next",
+                    prevEl: ".cards-slider .swiper-button-prev",
+                },
+                breakpoints: {
+                    320: {
+
+                    },
+                    577: {
+                        spaceBetween: 20,
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        spaceBetween: 20,
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        spaceBetween: 32,
+                    },
+                    1300: {
+                        spaceBetween: 64,
+                    },
+                },
+            });
+        };
+
+        const swiperDestroy = () => {
+            if (swiperInstance) {
+                swiperInstance.destroy(true, true);
+                swiperInstance = null;
+            }
+        };
+
+        const handleResize = () => {
+            console.log('sfsdfds')
+            if (window.innerWidth <= 577) {
+                if(!swiperInstance){
+                    swiperDestroy();
+                }
+            } else {
+                swiperInit();
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
     }
 
     initLogosTickerSlider(){

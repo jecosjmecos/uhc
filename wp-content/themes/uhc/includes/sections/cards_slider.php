@@ -10,9 +10,14 @@ if (empty($title) && empty($text) && empty($slider)) return;
     <div class="container">
         <div class="colored-wrapper">
 
-            <?php if (!empty($title)) echo '<h2 class="title_alt-color">' . $title . '</h2>' ?>
+            <?php if(!empty($title) || !empty($text)): ?>
+                <div class="cards-slider-text-wrapper">
 
-            <?php if (!empty($text)) echo '<div class="cards-slider-section-text">' . $text . '</div>' ?>
+                    <?php if (!empty($title)) echo '<h2 class="title_alt-color">' . $title . '</h2>' ?>
+
+                    <?php if (!empty($text)) echo '<div class="cards-slider-section-text">' . $text . '</div>' ?>
+                </div>
+            <?php endif; ?>
 
             <?php if (!empty($slider)): ?>
                 <div class="cards-slider">
