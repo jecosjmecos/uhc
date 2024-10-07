@@ -21,14 +21,15 @@
 
       @include media-breakpoint-down(sm){
         font-size: 24px;
-      }
-
-      @include media-breakpoint-down(xs){
         padding: 16px 0;
       }
 
       &_Medium{
         font-size: 24px;
+
+        @include media-breakpoint-down(sm){
+          font-size: 14px;
+        }
       }
 
       &_Small{
@@ -58,10 +59,12 @@
         }
         &.arrow{
           margin-left: auto;
+          min-width: 40px;
 
           @include media-breakpoint-down(sm){
             height: 32px;
             width: 32px;
+            min-width: 32px;
           }
 
           svg{

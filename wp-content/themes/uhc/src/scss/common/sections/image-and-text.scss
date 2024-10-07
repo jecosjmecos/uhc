@@ -1,10 +1,13 @@
 .image-and-text{
-  padding-bottom: 50px;
-  padding-top: 50px;
   .container{
     display: flex;
     align-items: center;
     gap: 73px;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(lg){
+      gap: 40px;
+    }
   }
 
   &__image{
@@ -12,10 +15,40 @@
     height: 500px;
     border-radius: 50px;
     overflow: hidden;
+
+    @include media-breakpoint-down(lg){
+      width: 300px;
+      height: 300px;
+      border-radius: 24px;
+    }
+
+    @include media-breakpoint-down(md){
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+    @include media-breakpoint-down(xs){
+      height: auto;
+      width: 100%;
+      max-width: 400px;
+    }
   }
 
   &__text{
     width: calc(100% - 573px);
     font-size: $fs-xl;
+
+    @include media-breakpoint-down(lg){
+      width: calc(100% - 340px);
+    }
+
+    @include media-breakpoint-down(md){
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm){
+      font-size: 14px;
+    }
   }
 }

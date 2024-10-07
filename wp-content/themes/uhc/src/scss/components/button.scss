@@ -14,8 +14,18 @@
   width: max-content;
   max-width: 100%;
 
+  @include media-breakpoint-down(sm){
+    min-height: 48px;
+  }
+
   span{
     transition: margin-left ease-out $transition;
+
+    svg{
+      @include media-breakpoint-down(sm){
+        max-width: 14px;
+      }
+    }
   }
 
   &:is(:hover, :focus){

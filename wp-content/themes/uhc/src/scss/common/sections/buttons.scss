@@ -18,6 +18,11 @@
       margin: 0 auto;
       transition: max-width ease-out $transition;
 
+      @include media-breakpoint-down(sm){
+        font-size: 10px;
+        max-width: 100%;
+      }
+
       span{
         &:nth-child(1){
           flex: 1 1 auto;
@@ -26,6 +31,14 @@
 
       &:is(:hover, :focus){
         max-width: calc(100% - 20px);
+
+        @include media-breakpoint-down(lg){
+          max-width: calc(100% - 50px);
+        }
+
+        @include media-breakpoint-down(sm){
+          max-width: 100%;
+        }
       }
     }
   }
