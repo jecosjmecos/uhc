@@ -282,11 +282,11 @@
 
     @include media-breakpoint-down(md){
       gap: 20px;
+      background-color: $gray-1;
     }
 
     @include media-breakpoint-down(sm){
       flex-direction: column;
-      background-color: $gray-1;
       gap: 16px;
       padding: 16px;
     }
