@@ -13,6 +13,10 @@ body {
 	line-height: $lh;
 	color: $primary-color;
 	background-color: $white;
+
+	@include media-breakpoint-down(sm){
+		font-size: $fs-sm;
+	}
 }
 
 img {
@@ -35,7 +39,9 @@ img {
 
 .container {
 	&_short{
-		max-width: 1070px;
+		@include media-breakpoint-up(md){
+			max-width: 1070px;
+		}
 	}
 
     @include make-container($gutter: $grid-gutter-width);
