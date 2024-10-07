@@ -10,7 +10,7 @@ $thumbnail_class = empty($thumbnail) ? 'post-preview__thumbnail_empty' : '';
 
 <article class="post-preview_full">
     <a class="post-preview__thumbnail" href="<?php the_permalink(); ?>">
-        <?php echo '<span>' . (!empty($thumbnail) ? $thumbnail : $logo) . '</span>' ?>
+        <?php echo (!empty($thumbnail) ? $thumbnail : $logo); ?>
     </a>
 
     <div class="post-preview-content">

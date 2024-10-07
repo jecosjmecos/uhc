@@ -31,6 +31,18 @@
       gap: 30px 63px;
       padding-bottom: 40px;
 
+      @include media-breakpoint-down(lg){
+        padding-bottom: 0;
+      }
+
+      @include media-breakpoint-down(md){
+        gap: 20px;
+      }
+
+      @include media-breakpoint-down(xs){
+        font-size: 14px;
+      }
+
       a{
         text-transform: uppercase;
         color: $gray-2;
@@ -54,7 +66,7 @@
       flex-wrap: wrap;
       gap: 45px 30px;
 
-      @include media-breakpoint-down(xs){
+      @include media-breakpoint-down(sm){
         gap: 24px;
       }
     }
@@ -80,6 +92,14 @@
       .post-preview{
         width: 100%;
         max-width: calc(33.33% - 20px);
+
+        @include media-breakpoint-down(md){
+          max-width: calc(50% - 15px);
+        }
+
+        @include media-breakpoint-down(sm){
+          max-width: 100%;
+        }
       }
     }
   }
