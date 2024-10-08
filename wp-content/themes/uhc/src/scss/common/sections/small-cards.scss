@@ -10,6 +10,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px 50px;
+
+    @include media-breakpoint-down(lg){
+      gap: 30px;
+    }
+
+    @include media-breakpoint-down(xs){
+      gap: 20px;
+    }
   }
 
   &-item {
@@ -31,6 +39,19 @@
     position: relative;
     overflow: hidden;
 
+    @include media-breakpoint-down(lg){
+      width: calc(25% - 22.5px);
+    }
+
+    @include media-breakpoint-down(md){
+      width: calc(50% - 15px);
+    }
+
+    @include media-breakpoint-down(xs){
+      width: calc(50% - 10px);
+      font-size: 14px;
+    }
+
     .text-hover {
       position: absolute;
       background-color: $primary-color;
@@ -44,6 +65,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include media-breakpoint-down(xs){
+        font-size: 12px;
+      }
     }
 
     &:hover {

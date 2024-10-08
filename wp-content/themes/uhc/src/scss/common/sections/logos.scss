@@ -10,4 +10,11 @@
     flex-wrap: wrap;
     gap: 30px 40px;
   }
+
+  &-item{
+    @include media-breakpoint-down(sm){
+      width: calc(50% - 20px);
+      text-align: center;
+    }
+  }
 }

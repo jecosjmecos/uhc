@@ -3,16 +3,24 @@
   &-items{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px 40px;
   }
 
   &-item{
     width: calc(50% - 20px);
+
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
   }
 
   &_3{
     .text-columns-item{
       width: calc(33.33% - 26.6px);
+
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
     }
   }
 
