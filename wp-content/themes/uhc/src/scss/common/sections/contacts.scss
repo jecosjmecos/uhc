@@ -1,4 +1,8 @@
 .contacts{
+  @include media-breakpoint-down(md){
+    margin: 100px 0;
+  }
+
   &:first-child{
     margin-top: 50px;
   }
@@ -7,17 +11,39 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px 94px;
+
+    @include media-breakpoint-down(lg){
+      gap: 40px;
+    }
+
+    @include media-breakpoint-down(md){
+      gap: 100px;
+    }
+
   }
 
   &-address{
     width: 100%;
     max-width: 456px;
 
+    @include media-breakpoint-down(md){
+      max-width: 100%;
+      order: 3;
+    }
+
     .acf-map {
       height: 432px;
       width: 100%;
       border-radius: 50px;
       overflow: hidden;
+
+      @include media-breakpoint-down(lg){
+        border-radius: 24px;
+      }
+
+      @include media-breakpoint-down(sm){
+        height: 325px;
+      }
     }
 
     .acf-map img {
@@ -48,12 +74,21 @@
     width: 100%;
     max-width: calc(100% - 456px - 94px);
 
+    @include media-breakpoint-down(md){
+      max-width: 100%;
+      order: 1;
+    }
+
     h2{
       margin-bottom: 48px;
     }
 
     .wpcf7{
       max-width: 550px;
+
+      @include media-breakpoint-down(md){
+        max-width: 100%;
+      }
 
       textarea{
         height: 80px;
@@ -66,6 +101,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
+    width: 100%;
+
+    @include media-breakpoint-down(md){
+      order: 2;
+      margin-top: 0;
+    }
 
     &__title{
       background-color: $primary-color;
@@ -81,6 +122,18 @@
       padding: 16px;
       border-radius: 24px;
       text-transform: uppercase;
+
+      @include media-breakpoint-down(lg){
+        min-width: auto;
+        width: calc(66.67% - 15px);
+      }
+
+      @include media-breakpoint-down(sm){
+        min-width: auto;
+        width: calc(50% - 11px);
+        font-size: 12px;
+        border-radius: 12px;
+      }
     }
 
     &__link{
@@ -97,7 +150,36 @@
       transition: color ease-out $transition, background-color ease-out $transition;
       min-width: 210px;
 
+      @include media-breakpoint-down(lg){
+        min-width: auto;
+        width: calc(33.33% - 15px);
+      }
+
+      @include media-breakpoint-down(sm){
+        min-width: auto;
+        width: calc(50% - 11px);
+        border-radius: 12px;
+      }
+
+      &:nth-child(5){
+        @include media-breakpoint-down(sm){
+          min-width: auto;
+          width: 100%;
+          flex-direction: row;
+          gap: 16px;
+          align-items: center;
+          min-height: 64px;
+        }
+
+        span{
+          &:nth-child(2){
+            margin-top: 0;
+          }
+        }
+      }
+
       span{
+        word-break: break-word;
         svg{
           min-width: 32px;
           min-height: 32px;
